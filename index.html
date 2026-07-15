@@ -1,0 +1,4316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sarthak Ranjan" />
+    <meta
+      name="description"
+      content="Portfolio of Sarthak Ranjan, a modern Web Developer specializing in premium UI/UX, animations, and high-performance frontend engineering."
+    />
+    <meta
+      name="keywords"
+      content="Sarthak Ranjan, Web Developer, Portfolio, Frontend Engineer, UI/UX, HTML, CSS, JavaScript, React"
+    />
+
+    <!-- OpenGraph (LinkedIn, Discord, Facebook) -->
+    <meta property="og:title" content="Sarthak Ranjan | Web Developer" />
+    <meta
+      property="og:description"
+      content="Explore my interactive web development portfolio. Built with passion, performance, and premium glassmorphic UI."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/og-preview.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sarthak Ranjan | Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Explore my interactive web development portfolio. Built with passion, performance, and premium glassmorphic UI."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-domain.com/og-preview.png"
+    />
+
+    <title>Sarthak Ranjan | Web Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts: Outfit (modern geometric) and Space Grotesk (tech/edgy) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=218" />
+
+    <!-- NUCLEAR MOBILE NAV FIX -->
+    <style>
+      @media (max-width: 768px) {
+        #navbar .nav-controls {
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          gap: 16px !important;
+          position: absolute !important;
+          right: 20px !important;
+          top: 50% !important;
+          transform: translateY(-50%) translateZ(0) !important;
+          z-index: 99999 !important;
+          width: auto !important;
+          margin: 0 !important;
+          animation: none !important;
+          transition: none !important;
+        }
+        #navbar .mobile-toggle,
+        #navbar .theme-dropdown-container {
+          display: flex !important;
+          margin: 0 !important;
+          animation: none !important;
+          transition: none !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+        #navbar .hamburger {
+          position: relative !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          display: flex !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="theme-dark">
+    <!-- Premium Terminal Preloader -->
+    <div id="preloader" class="terminal-preloader">
+      <div class="terminal-content">
+        <div class="term-line center term-logo glitch-text" data-text="SR">
+          SR
+        </div>
+        <br />
+        <div class="term-line center term-name">Sarthak Ranjan</div>
+        <br />
+        <div class="term-line center term-role">WebDeveloper</div>
+        <br />
+        <br />
+        <div class="term-line" id="term-init">> Initializing Portfolio...</div>
+        <br />
+        <div
+          class="term-line term-progress-container hidden"
+          id="term-progress-wrapper"
+        >
+          <span id="term-progress-bar"></span>
+          <span id="term-progress-text">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="bg-effects" aria-hidden="true">
+      <div class="mesh-fluid"></div>
+      <div class="bg-orb" id="bgOrb"></div>
+      <div class="noise"></div>
+    </div>
+
+    <!-- UI Overlays -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div id="side-progress">
+      <div class="fill" id="sideFill"></div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav" id="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <button class="profile-btn" id="profileBtn" aria-label="View Profile">
+            <img
+              src="Profile picture.webp"
+              alt="Sarthak Ranjan"
+              class="profile-btn-img"
+            />
+          </button>
+          <a href="#" class="logo magnetic-sm" id="logo" tabindex="0">
+            <span class="logo-text">SR<span class="accent">.</span></span>
+          </a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-label="Toggle Menu"
+            aria-expanded="false"
+          >
+            <div class="hamburger"><span></span><span></span><span></span></div>
+          </button>
+
+          <div class="theme-dropdown-container" id="themeDropdownContainer">
+            <button
+              class="theme-toggle magnetic-sm"
+              id="themeCycleBtn"
+              aria-label="Cycle Theme"
+            >
+              <i class="fa-solid fa-palette"></i>
+            </button>
+            <i
+              class="fa-solid fa-chevron-down preview-icon"
+              id="themeToggleBtn"
+              aria-label="Preview Themes"
+            ></i>
+            <div class="theme-dropdown-menu" id="themeDropdownMenu">
+              <button class="theme-option active" data-theme-value="dark">
+                <span class="theme-color" style="background: #8b5cf6"></span>
+                Dark (Violet)
+              </button>
+              <button class="theme-option" data-theme-value="light">
+                <span
+                  class="theme-color"
+                  style="background: #ffffff; border: 1px solid #ccc"
+                ></span>
+                Light Mode
+              </button>
+              <button class="theme-option" data-theme-value="ocean">
+                <span class="theme-color" style="background: #3b82f6"></span>
+                Ocean
+              </button>
+              <button class="theme-option" data-theme-value="cyberpunk">
+                <span class="theme-color" style="background: #ec4899"></span>
+                Cyberpunk
+              </button>
+              <button class="theme-option" data-theme-value="gold">
+                <span class="theme-color" style="background: #f59e0b"></span>
+                Gold
+              </button>
+              <button class="theme-option" data-theme-value="monochrome">
+                <span class="theme-color" style="background: #a1a1aa"></span>
+                Monochrome
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div id="particles-js"></div>
+        <div class="container hero-content">
+          <div class="hero-left">
+            <div class="hero-badge reveal-stagger">
+              <i
+                class="fa-solid fa-location-dot"
+                style="
+                  color: #4ade80;
+                  font-size: 1rem;
+                  filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.6));
+                "
+              ></i>
+              <span>Lucknow, Uttar Pradesh, India</span>
+            </div>
+            <p class="hero-greeting reveal-stagger">Hello, I'm</p>
+            <div class="hero-title-wrapper reveal-stagger">
+              <h1 class="hero-title">
+                Sarthak <br /><span class="gradient-text">Ranjan</span>
+              </h1>
+              <button
+                onclick="document.getElementById('profileBtn').click()"
+                class="profile-arrow magnetic"
+                title="Open Profile"
+                aria-label="Open Profile"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <h2 class="hero-subtitle reveal-stagger">
+              <span class="scramble-word text-accent">Web Developer</span>
+            </h2>
+            <p class="hero-desc reveal-stagger">
+              I build fast, responsive and modern web experiences while
+              exploring AI-powered solutions and creating intuitive digital
+              experiences.
+            </p>
+            <div class="hero-actions reveal-stagger">
+              <a
+                href="Sarthak_Ranjan_Resume_Final.pdf"
+                target="_blank"
+                class="btn btn-primary magnetic"
+              >
+                <span>View Resume</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button class="btn btn-outline magnetic say-hello-btn">
+                <span>Say Hello</span>
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+            </div>
+
+            <div class="hero-tech-pills reveal-stagger">
+              <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
+              <span class="pill"
+                ><i class="fa-brands fa-css3-alt"></i> CSS</span
+              >
+              <span class="pill"
+                ><i class="fa-brands fa-js"></i> JavaScript</span
+              >
+              <span class="pill"><i class="fa-brands fa-react"></i> React</span>
+              <span class="pill"
+                ><i class="fa-brands fa-python"></i> Python</span
+              >
+              <span class="pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+            </div>
+          </div>
+
+          <div class="hero-right reveal-stagger">
+            <div class="hero-profile-wrapper tilt-card">
+              <div class="card-glow"></div>
+              <div class="hero-profile-card">
+                <img
+                  src="Profile picture.webp"
+                  alt="Sarthak Ranjan"
+                  class="hero-profile-img"
+                />
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="floating-badge badge-1">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <div class="floating-badge badge-2">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="floating-badge badge-3">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="floating-badge badge-4">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="floating-badge badge-5">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="floating-badge badge-6">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+              <div class="floating-badge badge-7">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <div class="floating-badge badge-8">
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator reveal-stagger" style="--delay: 1">
+          <div class="mouse"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+      <!-- MISSION STATEMENT SECTION -->
+      <section class="mission-statement">
+        <div class="container reveal">
+          <h2 class="mission-text reveal-words">
+            <span class="word">“Transforming</span>
+            <span class="word">ideas</span>
+            <span class="word">into</span>
+            <span class="word highlight-text glow-word">responsive,</span>
+            <span class="word highlight-text glow-word">intuitive,</span>
+            <span class="word">and</span>
+            <span class="word highlight-text glow-word">impactful</span>
+            <span class="word">web</span>
+            <span class="word">experiences.”</span>
+          </h2>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about section-padding" id="about">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">About</span>
+            <h2 class="section-title">Developer Profile</h2>
+            <p class="section-desc">
+              Web Developer | AI & Data Science Student | Building modern,
+              responsive, and user-focused web applications.
+            </p>
+          </div>
+
+          <div class="ambient-glow"></div>
+          <div class="bento-grid about-bento">
+            <!-- Card 1 — About Me (Large Card) -->
+            <div class="bento-card span-2 highlight reveal-stagger tilt-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <h3 class="card-title">About Me</h3>
+                <p class="bio-text">
+                  I'm Sarthak Ranjan, a Computer Science Engineering student
+                  specializing in
+                  <span class="highlight-text"
+                    >Artificial Intelligence & Data Science</span
+                  >
+                  with a strong passion for frontend development.<br /><br />I
+                  enjoy transforming ideas into fast, responsive, and
+                  user-friendly web applications that combine
+                  <span class="highlight-text">clean code</span> with
+                  <span class="highlight-text">thoughtful design</span
+                  >.<br /><br />Every project I build helps me improve my
+                  technical skills, explore modern technologies, and create
+                  meaningful digital experiences. Alongside frontend
+                  development, I'm actively learning
+                  <span class="highlight-text">React</span>, full-stack
+                  development, and AI-powered tools to become a well-rounded
+                  software developer.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 — Profile -->
+            <div class="bento-card glass reveal-stagger tilt-card profile-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="quick-profile">
+                  <img
+                    src="Profile picture.webp"
+                    alt="Sarthak Ranjan"
+                    class="about-profile-img magnetic-sm"
+                    onclick="document.getElementById('profileBtn').click()"
+                    title="View Profile"
+                  />
+                  <p><i class="fa-regular fa-user"></i> Sarthak Ranjan</p>
+                  <p><i class="fa-solid fa-laptop-code"></i> Web Developer</p>
+                  <p><i class="fa-solid fa-location-dot"></i> Lucknow, India</p>
+                  <p>
+                    <i class="fa-solid fa-graduation-cap"></i> B.Tech CSE (AI &
+                    Data Science)
+                  </p>
+                  <p class="open-to-work">
+                    <span class="pulse-dot"></span> Open to Work
+                  </p>
+                  <a
+                    href="Sarthak_Ranjan_Resume_Final.pdf"
+                    target="_blank"
+                    class="btn btn-outline magnetic-sm about-resume-btn btn-shine"
+                    ><i class="fa-solid fa-file-pdf"></i> View Resume</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 — Journey -->
+            <div class="bento-card span-2 glass reveal-stagger tilt-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">Journey</h3>
+                <div
+                  class="mini-timeline"
+                  style="
+                    border-left: 2px solid rgba(255, 255, 255, 0.1);
+                    margin-left: 10px;
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                  "
+                >
+                  <div
+                    class="mt-item"
+                    style="
+                      position: relative;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: 8px;
+                    "
+                  >
+                    <div class="timeline-dot"></div>
+                    <span class="mt-year" style="font-size: 1.05rem"
+                      >Started My Journey</span
+                    >
+                    <span class="mt-text"
+                      >Started my B.Tech in Computer Science Engineering (AI &
+                      Data Science) and discovered my passion for web
+                      development.</span
+                    >
+                  </div>
+                  <div
+                    class="mt-item"
+                    style="
+                      position: relative;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: 8px;
+                    "
+                  >
+                    <div class="timeline-dot"></div>
+                    <span class="mt-year" style="font-size: 1.05rem"
+                      >Web Development</span
+                    >
+                    <span class="mt-text"
+                      >Learned HTML, CSS, JavaScript, and built responsive,
+                      interactive web applications while strengthening my
+                      frontend fundamentals.</span
+                    >
+                  </div>
+                  <div
+                    class="mt-item"
+                    style="
+                      position: relative;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: 8px;
+                    "
+                  >
+                    <div class="timeline-dot"></div>
+                    <span class="mt-year" style="font-size: 1.05rem"
+                      >Professional Experience</span
+                    >
+                    <span class="mt-text"
+                      >Completed internships at IOCL and CodeAlpha, gaining
+                      hands-on experience in frontend development, responsive
+                      UI, and REST API integration.</span
+                    >
+                  </div>
+                  <div
+                    class="mt-item"
+                    style="
+                      position: relative;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: 8px;
+                    "
+                  >
+                    <div class="timeline-dot"></div>
+                    <span class="mt-year" style="font-size: 1.05rem"
+                      >Currently Learning</span
+                    >
+                    <span class="mt-text"
+                      >Currently learning React, Full Stack Development, Machine
+                      Learning, and AI while building real-world projects and
+                      expanding my technical skills.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 — Current Focus -->
+            <div class="bento-card glass reveal-stagger tilt-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">Current Focus</h3>
+                <div class="focus-list">
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-solid fa-code"></i> Web Development
+                  </div>
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-solid fa-rocket"></i> Frontend Development
+                  </div>
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-brands fa-react"></i> React Ecosystem
+                  </div>
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-solid fa-palette"></i> UI/UX Design
+                  </div>
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-solid fa-globe"></i> REST API Integration
+                  </div>
+                  <div class="focus-item magnetic-sm">
+                    <i class="fa-solid fa-robot"></i> AI-assisted Development
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 — Quick Facts -->
+            <div class="bento-card glass reveal-stagger tilt-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">Quick Facts</h3>
+                <div
+                  class="facts-list"
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+                  "
+                >
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >Lucknow</span
+                    >
+                  </div>
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >SRMU</span
+                    >
+                  </div>
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-briefcase"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >2+ Internships</span
+                    >
+                  </div>
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-laptop-code"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >10+ Projects</span
+                    >
+                  </div>
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-certificate"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >15+ Certifications</span
+                    >
+                  </div>
+                  <div
+                    class="fact-item"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      background: rgba(255, 255, 255, 0.03);
+                      padding: 15px 10px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.05);
+                      gap: 8px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-video"
+                      style="font-size: 1.5rem; color: var(--accent-primary)"
+                    ></i>
+                    <span style="font-size: 0.95rem; font-weight: 500"
+                      >Content Creator</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 — Achievements -->
+            <div class="bento-card span-2 glass reveal-stagger tilt-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">Achievements</h3>
+                <div class="achievements-list">
+                  <div class="achievement-item">
+                    <i class="fa-solid fa-trophy"></i> Technical Lead — SRMU
+                    Tech Club
+                  </div>
+                  <div class="achievement-item">
+                    <i class="fa-solid fa-laptop-code"></i> Frontend Internships
+                    Completed
+                  </div>
+                  <div class="achievement-item">
+                    <i class="fa-solid fa-rocket"></i> Multiple Responsive
+                    Projects Deployed
+                  </div>
+                  <div class="achievement-item">
+                    <i class="fa-solid fa-certificate"></i> Professional
+                    Certifications Earned
+                  </div>
+                  <div class="achievement-item">
+                    <i class="fa-solid fa-handshake"></i> Supported 300+
+                    Participants During Technical Events
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE (Decorative) -->
+      <div class="marquee-container reveal">
+        <div class="marquee-track" id="marquee">
+          <div class="marquee-content">
+            <span><i class="fa-brands fa-html5"></i> HTML5</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-react"></i> React</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-node"></i> Node.js</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-python"></i> Python</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-java"></i> Java</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-github"></i> Git & GitHub</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-solid fa-server"></i> REST APIs</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-solid fa-universal-access"></i> WCAG</span
+            ><span class="dot">✦</span>
+          </div>
+          <!-- Duplicate for seamless looping -->
+          <div class="marquee-content" aria-hidden="true">
+            <span><i class="fa-brands fa-html5"></i> HTML5</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-react"></i> React</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-node"></i> Node.js</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-python"></i> Python</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-java"></i> Java</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-brands fa-github"></i> Git & GitHub</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-solid fa-server"></i> REST APIs</span
+            ><span class="dot">✦</span>
+            <span><i class="fa-solid fa-universal-access"></i> WCAG</span
+            ><span class="dot">✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS SECTION -->
+      <section class="skills section-padding" id="skills">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Skills</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-desc">
+              Technologies, tools and development principles I use to build
+              modern, responsive web applications.
+            </p>
+          </div>
+          <div class="skill-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+            <button class="filter-btn" data-filter="soft-skills">
+              Soft Skills
+            </button>
+          </div>
+
+          <div class="bento-grid skills-grid">
+            <div
+              class="bento-card highlight reveal-stagger tilt-card"
+              data-category="frontend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-bolt"></i> Development
+                </h3>
+                <p class="card-desc">
+                  Building responsive, interactive and accessible web
+                  experiences.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-html5-plain colored"></i> HTML5</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">HTML5</div>
+                      <ul>
+                        <li>Semantic Markup</li>
+                        <li>Responsive Layout</li>
+                        <li>Accessibility</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-css3-plain colored"></i> CSS3</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">CSS3</div>
+                      <ul>
+                        <li>Modern Layout</li>
+                        <li>Flexbox & Grid</li>
+                        <li>Animations</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag"
+                      ><i class="devicon-javascript-plain colored"></i>
+                      JavaScript (ES6+)</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">JavaScript</div>
+                      <ul>
+                        <li>DOM Manipulation</li>
+                        <li>ES6+</li>
+                        <li>Fetch API</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bento-card highlight reveal-stagger tilt-card"
+              data-category="frontend backend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-book-open"></i> Framework(Learning)
+                </h3>
+                <p class="card-desc">
+                  Expanding my frontend ecosystem through modern JavaScript
+                  frameworks.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-react-original colored"></i>
+                      React.js</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 70%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">React.js</div>
+                      <ul>
+                        <li>Component-Based UI</li>
+                        <li>Hooks & State</li>
+                        <li>JSX</li>
+                        <li class="dim">
+                          Proficiency:
+                          <span class="prof-level">Intermediate</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag"
+                      ><i class="devicon-nodejs-plain colored"></i>
+                      Node.js</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 65%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Node.js</div>
+                      <ul>
+                        <li>Server-side JS</li>
+                        <li>REST APIs</li>
+                        <li>Express & NPM</li>
+                        <li class="dim">
+                          Proficiency:
+                          <span class="prof-level">Intermediate</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bento-card highlight reveal-stagger tilt-card"
+              data-category="tools"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-screwdriver-wrench"></i> Development
+                  Tools
+                </h3>
+                <p class="card-desc">
+                  Tools I use daily for development, debugging and version
+                  control.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-git-plain colored"></i> Git</span
+                    >
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Git</div>
+                      <ul>
+                        <li>Version Control</li>
+                        <li>Branching</li>
+                        <li>Collaboration</li>
+                      </ul>
+                      <div class="proficiency-container">
+                        <div class="proficiency-label">
+                          <span>Proficiency</span>
+                          <span class="prof-level">Advanced</span>
+                        </div>
+                        <div class="proficiency-bar">
+                          <div
+                            class="proficiency-fill"
+                            style="width: 85%"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-github-original colored"></i>
+                      GitHub</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">GitHub</div>
+                      <ul>
+                        <li>Repositories</li>
+                        <li>Pull Requests</li>
+                        <li>CI/CD Actions</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag"
+                      ><i class="devicon-vscode-plain colored"></i> VS
+                      Code</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">VS Code</div>
+                      <ul>
+                        <li>Extensions</li>
+                        <li>Debugging</li>
+                        <li>Integrated Terminal</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bento-card highlight reveal-stagger tilt-card"
+              data-category="backend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-laptop-code"></i> Programming
+                </h3>
+                <p class="card-desc">
+                  Strengthening problem-solving with object-oriented
+                  programming.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-python-plain colored"></i> Python</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Python</div>
+                      <ul>
+                        <li>Scripting</li>
+                        <li>Data Manipulation</li>
+                        <li>Automation</li>
+                        <li class="dim">
+                          Proficiency:
+                          <span class="prof-level">Intermediate</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag"
+                      ><i class="devicon-java-plain colored"></i> Java</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 70%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Java</div>
+                      <ul>
+                        <li>Object-Oriented</li>
+                        <li>Strongly Typed</li>
+                        <li>Scalable</li>
+                        <li class="dim">
+                          Proficiency:
+                          <span class="prof-level">Intermediate</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag"
+                      ><i class="devicon-cplusplus-plain colored"></i> C++</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 40%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">C++</div>
+                      <ul>
+                        <li>Memory Management</li>
+                        <li>Performance</li>
+                        <li>Data Structures</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Beginner</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bento-card span-full highlight reveal-stagger tilt-card"
+              data-category="frontend backend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Development
+                  Principles
+                </h3>
+                <p class="card-desc">
+                  Standards followed in every project I build.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-server"></i> REST API
+                      Integration</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">REST API</div>
+                      <ul>
+                        <li>Endpoints</li>
+                        <li>JSON Payloads</li>
+                        <li>HTTP Methods</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Advanced</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-mobile-screen-button"></i>
+                      Responsive Design</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Responsive</div>
+                      <ul>
+                        <li>Media Queries</li>
+                        <li>Mobile-First</li>
+                        <li>Fluid Layouts</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Mastered</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-brands fa-chrome"></i> Cross-Browser
+                      Compatibility</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Compatibility</div>
+                      <ul>
+                        <li>WebKit & Chromium</li>
+                        <li>Vendor Prefixes</li>
+                        <li>Fallbacks</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Mastered</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-universal-access"></i> WCAG
+                      Accessibility</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Accessibility</div>
+                      <ul>
+                        <li>ARIA Roles</li>
+                        <li>Color Contrast</li>
+                        <li>Screen Readers</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-gauge-high"></i> Performance
+                      Optimization</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Performance</div>
+                      <ul>
+                        <li>Lazy Loading</li>
+                        <li>Minification</li>
+                        <li>Asset Caching</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bento-card span-full highlight reveal-stagger tilt-card"
+              data-category="soft-skills"
+            >
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-user-tie"></i> Professional Strengths
+                </h3>
+                <p class="card-desc">
+                  Soft skills that drive project success and team synergy.
+                </p>
+                <div class="tags">
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-puzzle-piece"></i> Problem
+                      Solving</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Problem Solving</div>
+                      <ul>
+                        <li>Analytical Thinking</li>
+                        <li>Debugging</li>
+                        <li>Root Cause Analysis</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-users"></i> Team
+                      Collaboration</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Team Collaboration</div>
+                      <ul>
+                        <li>Agile / Scrum</li>
+                        <li>Cross-functional</li>
+                        <li>Code Reviews</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-ranking-star"></i> Technical
+                      Leadership</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Technical Leadership</div>
+                      <ul>
+                        <li>Mentoring</li>
+                        <li>Architecture Planning</li>
+                        <li>Best Practices</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-comments"></i> Communication</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Communication</div>
+                      <ul>
+                        <li>Client Facing</li>
+                        <li>Documentation</li>
+                        <li>Clear Reporting</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tag-wrapper right-align">
+                    <span class="tag accent-tag"
+                      ><i class="fa-solid fa-graduation-cap"></i> Continuous
+                      Learning</span
+                    >
+                    <div class="tag-progress">
+                      <div class="tag-progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      <div class="tooltip-header">Continuous Learning</div>
+                      <ul>
+                        <li>Adaptability</li>
+                        <li>Tech Trends</li>
+                        <li>Self-taught</li>
+                        <li class="dim">
+                          Proficiency: <span class="prof-level">Applied</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS BAR SECTION -->
+      <section class="stats-bar section-padding">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item reveal-stagger">
+              <div class="stat-number">
+                <span class="counter" data-target="10">0</span
+                ><span class="stat-plus">+</span>
+              </div>
+              <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="stat-item reveal-stagger">
+              <div class="stat-number">
+                <span class="counter" data-target="500">0</span
+                ><span class="stat-plus">+</span>
+              </div>
+              <div class="stat-label">GitHub Commits</div>
+            </div>
+            <div class="stat-item reveal-stagger">
+              <div class="stat-number">
+                <span class="counter" data-target="20">0</span
+                ><span class="stat-plus">+</span>
+              </div>
+              <div class="stat-label">Tech Skills Mastered</div>
+            </div>
+            <div class="stat-item reveal-stagger">
+              <div class="stat-number">
+                <span class="counter" data-target="100">0</span
+                ><span class="stat-plus">%</span>
+              </div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects section-padding" id="projects">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Projects</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-desc">
+              A selection of real-world projects focused on responsive
+              interfaces, performance, and modern frontend development.
+            </p>
+          </div>
+
+          <div class="projects-bento-grid">
+            <!-- Project 01: IOCL News Portal -->
+            <article
+              class="bento-card project-bento glass reveal-stagger tilt-card span-full"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.2"
+            >
+              <div class="card-glow"></div>
+
+              <div class="project-preview browser-mockup">
+                <div class="browser-topbar">
+                  <div class="browser-address">IOCL News Portal</div>
+                </div>
+                <div class="browser-content carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="Project/IOCL News Portal 1.webp"
+                      alt="IOCL News Portal 1"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/IOCL News Portal 2.webp"
+                      alt="IOCL News Portal 2"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/IOCL News Portal 3.webp"
+                      alt="IOCL News Portal 3"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/IOCL News Portal 4.webp"
+                      alt="IOCL News Portal 4"
+                      class="preview-img"
+                    />
+                  </div>
+                  <div class="preview-overlay">
+                    <a
+                      href="https://iocl-project-y442.onrender.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn primary magnetic-sm"
+                    >
+                      View Live
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sarthak-ranjan/IOCL-Project"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn secondary magnetic-sm"
+                    >
+                      GitHub <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  
+
+              </div>
+<div class="card-content project-content">
+                <div class="project-meta-top">
+                  <span class="project-number">01</span>
+                  <div
+                    class="status-badge"
+                    style="padding: 4px 10px; font-size: 0.75rem"
+                  >
+                    <div class="status-dot-green"></div>
+                    Live
+                  </div>
+                </div>
+                <div class="project-header">
+                  <h3 class="card-title">IOCL News Portal</h3>
+
+                </div>
+                <div class="project-description">
+                  <p class="card-desc">
+                    Developed a comprehensive, responsive, and interactive news
+                    portal for
+                    <strong
+                      >Indian Oil Corporation Limited (IOCL), Barauni
+                      Refinery</strong
+                    >
+                    during my vocational training internship. The application
+                    was designed to provide employees with a centralized
+                    platform to access the latest refinery announcements,
+                    official notifications, project updates, recruitment news,
+                    safety alerts, financial reports, and monthly news in a
+                    clean, organized, and user-friendly dashboard.
+                  </p>
+
+                  <div class="project-hidden-details" style="display: none">
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      The portal was built with a strong focus on usability,
+                      accessibility, and responsive design, ensuring a seamless
+                      experience across desktop, tablet, and mobile devices. A
+                      modern dashboard layout was created to simplify navigation
+                      while allowing users to quickly discover important
+                      information through dynamic content rendering and
+                      intuitive interface components.<br /><br />Implemented a
+                      wide range of interactive frontend features using
+                      <strong>HTML, CSS, and JavaScript</strong>, including
+                      real-time search functionality, category-based filtering,
+                      quick filter cards, today's highlights section,
+                      notification center with unread counters, search history
+                      using Local Storage, bookmark management, voice search
+                      integration, weather widget, loading animations, smooth
+                      page transitions, responsive navigation, and dark/light
+                      theme support. These features were designed to improve
+                      accessibility, increase user engagement, and provide a
+                      modern application-like browsing experience.<br /><br />To
+                      enhance performance and maintainability, the application
+                      follows responsive design principles, optimized asset
+                      loading, reusable UI components, modular JavaScript logic,
+                      and clean CSS architecture. Special attention was given to
+                      smooth animations, hover interactions, cross-browser
+                      compatibility, accessibility (WCAG-friendly practices),
+                      and mobile-first development to ensure a polished and
+                      professional user experience.<br /><br />The project also
+                      integrates REST API-based dynamic content loading,
+                      allowing news data to be fetched and displayed efficiently
+                      while supporting future scalability and easy content
+                      management. Throughout development, emphasis was placed on
+                      creating an intuitive interface that balances
+                      functionality with visual appeal, closely resembling the
+                      experience of a production-ready enterprise dashboard.
+                    </p>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Key Features:</strong>
+                    </p>
+                    <ul
+                      style="
+                        list-style-type: disc;
+                        font-size: 0.95rem;
+                        margin-left: 20px;
+                        padding-left: 10px;
+                        margin-top: 10px;
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                      "
+                    >
+                      <li>Responsive Mobile-First Dashboard</li>
+                      <li>REST API Integration for Dynamic News</li>
+                      <li>Real-Time Search & Search Suggestions</li>
+                      <li>Category-Based News Filtering</li>
+                      <li>Notification Center with Live Updates</li>
+                      <li>Bookmark Important News</li>
+                      <li>Search History using Local Storage</li>
+                      <li>Voice Search Functionality</li>
+                      <li>Weather Information Widget</li>
+                      <li>Today's Highlights Section</li>
+                      <li>Loading Screen & Smooth UI Animations</li>
+                      <li>Dark / Light Theme Support</li>
+                      <li>Cross-Browser Compatibility</li>
+                      <li>Accessibility-Oriented Design</li>
+                      <li>Performance-Optimized Frontend Architecture</li>
+                    </ul>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript
+                      (ES6), REST API Integration, Local Storage, Responsive
+                      Design, CSS Animations, Mobile-First Design, Cross-Browser
+                      Compatibility, UI/UX Design
+                    </p>
+                  </div>
+                  <button class="details-toggle-btn">
+                    View Details
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+                <div class="project-highlights">
+                  <h4 class="highlights-title">Project Stats</h4>
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> REST API Integration
+                    </li>
+                    <li><i class="fa-solid fa-check"></i> Real-Time Search</li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Category Filtering
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Notification Center
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Responsive Dashboard
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-js"></i> JavaScript (ES6)</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-server"></i> REST API</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-database"></i> Local Storage</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-desktop"></i> Responsive Design</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-wand-magic-sparkles"></i> CSS
+                    Animations</span
+                  >
+                </div>
+
+                <div class="project-footer">
+                  <span>Completed</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 02: Responsive Image Gallery -->
+            <article
+              class="bento-card project-bento glass reveal-stagger tilt-card"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.2"
+            >
+              <div class="card-glow"></div>
+
+              <div class="project-preview browser-mockup">
+                <div class="browser-topbar">
+                  <div class="browser-address">Sarthak Gallery</div>
+                </div>
+                <div class="browser-content carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="Project/Responsive Image Gallery 1.webp"
+                      alt="Responsive Image Gallery 1"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Responsive Image Gallery 2.webp"
+                      alt="Responsive Image Gallery 2"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Responsive Image Gallery 3.webp"
+                      alt="Responsive Image Gallery 3"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Responsive Image Gallery 4.webp"
+                      alt="Responsive Image Gallery 4"
+                      class="preview-img"
+                    />
+                  </div>
+                  <div class="preview-overlay">
+                    <a
+                      href="https://sarthak-ranjan.github.io/Sarthak-Gallery/"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn primary magnetic-sm"
+                    >
+                      View Live
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sarthak-ranjan/Sarthak-Gallery"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn secondary magnetic-sm"
+                    >
+                      GitHub <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  
+
+              </div>
+<div class="card-content project-content">
+                <div class="project-meta-top">
+                  <span class="project-number">02</span>
+                  <div
+                    class="status-badge"
+                    style="padding: 4px 10px; font-size: 0.75rem"
+                  >
+                    <div class="status-dot-green"></div>
+                    Live
+                  </div>
+                </div>
+                <div class="project-header">
+                  <h3 class="card-title">Sarthak Gallery</h3>
+
+                </div>
+                <div class="project-description">
+                  <p class="card-desc">
+                    Designed and developed a premium, responsive image gallery
+                    application focused on delivering a visually engaging, fast,
+                    and user-friendly browsing experience across desktop,
+                    tablet, and mobile devices.
+                  </p>
+
+                  <div class="project-hidden-details" style="display: none">
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      The project showcases modern frontend development
+                      techniques while emphasizing performance optimization,
+                      accessibility, and elegant interface design.<br /><br />The
+                      gallery was built with a clean and organized layout that
+                      allows users to browse image collections effortlessly
+                      through responsive CSS Grid structures and intuitive
+                      navigation. Careful attention was given to spacing,
+                      typography, animations, and layout consistency to create
+                      an immersive viewing experience that feels modern and
+                      professional.<br /><br />Implemented numerous interactive
+                      features using <strong>HTML, CSS, and JavaScript</strong>,
+                      including responsive CSS Grid layouts, lazy loading for
+                      optimized image delivery, fullscreen image preview,
+                      category-based filtering, smooth image transitions,
+                      keyboard navigation, hover animations, responsive lightbox
+                      interactions, optimized asset loading, and mobile-first
+                      responsiveness. These features significantly improve
+                      usability while maintaining excellent loading
+                      performance.<br /><br />To enhance scalability and
+                      maintainability, the project utilizes reusable UI
+                      components, modular JavaScript logic, responsive design
+                      techniques, optimized image loading strategies, and clean
+                      CSS architecture. The gallery was carefully optimized for
+                      accessibility, cross-browser compatibility, and smooth
+                      user interactions to ensure a consistent experience across
+                      different devices.<br /><br />The project demonstrates
+                      modern frontend development practices by combining
+                      performance optimization with engaging UI design,
+                      resulting in a lightweight, elegant, and production-ready
+                      image gallery capable of handling large collections of
+                      visual content efficiently.
+                    </p>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Key Features:</strong>
+                    </p>
+                    <ul
+                      style="
+                        list-style-type: disc;
+                        font-size: 0.95rem;
+                        margin-left: 20px;
+                        padding-left: 10px;
+                        margin-top: 10px;
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                      "
+                    >
+                      <li>Responsive CSS Grid Layout</li>
+                      <li>Lazy Loading for Images</li>
+                      <li>Fullscreen Image Preview</li>
+                      <li>Category-Based Filtering</li>
+                      <li>Smooth Hover Animations</li>
+                      <li>Keyboard Navigation</li>
+                      <li>Optimized Asset Loading</li>
+                      <li>Mobile-First Responsive Design</li>
+                      <li>Performance Optimization</li>
+                      <li>Cross-Browser Compatibility</li>
+                      <li>Clean Modern Interface</li>
+                      <li>Accessibility-Oriented Design</li>
+                    </ul>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript
+                      (ES6), CSS Grid, Lazy Loading, Responsive Design,
+                      Mobile-First Design, Cross-Browser Compatibility, UI/UX
+                      Design
+                    </p>
+                  </div>
+                  <button class="details-toggle-btn">
+                    View Details
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+                <div class="project-highlights">
+                  <h4 class="highlights-title">Project Stats</h4>
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Responsive CSS Grid
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Lazy Image Loading
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Fullscreen Preview
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Category Filtering
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Optimized Performance
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-js"></i> JavaScript (ES6)</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-table-cells-large"></i> CSS
+                    Grid</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-spinner"></i> Lazy Loading</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-pen-nib"></i> UI/UX Design</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-wand-magic-sparkles"></i> Web
+                    Animations</span
+                  >
+                </div>
+
+                <div class="project-footer">
+                  <span>Completed</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 03: Personal Portfolio -->
+            <article
+              class="bento-card project-bento glass reveal-stagger tilt-card"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.2"
+            >
+              <div class="card-glow"></div>
+
+              <div class="project-preview browser-mockup">
+                <div class="browser-topbar">
+                  <div class="browser-address">React Portfolio</div>
+                </div>
+                <div class="browser-content carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="Project/Personal Portfolio 1.webp"
+                      alt="Personal Portfolio 1"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Personal Portfolio 2.webp"
+                      alt="Personal Portfolio 2"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Personal Portfolio 3.webp"
+                      alt="Personal Portfolio 3"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Personal Portfolio 4.webp"
+                      alt="Personal Portfolio 4"
+                      class="preview-img"
+                    />
+                  </div>
+                  <div class="preview-overlay">
+                    <a
+                      href="https://sarthak-ranjan.github.io/Sarthaks-React-Folio/"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn primary magnetic-sm"
+                    >
+                      View Live
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sarthak-ranjan/first-project"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn secondary magnetic-sm"
+                    >
+                      GitHub <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  
+
+              </div>
+<div class="card-content project-content">
+                <div class="project-meta-top">
+                  <span class="project-number">04</span>
+                  <div
+                    class="status-badge"
+                    style="padding: 4px 10px; font-size: 0.75rem"
+                  >
+                    <div class="status-dot-green"></div>
+                    Live
+                  </div>
+                </div>
+                <div class="project-header">
+                  <h3 class="card-title">Personal Portfolio</h3>
+
+                </div>
+                <div class="project-description">
+                  <p class="card-desc">
+                    Designed and developed a premium, fully responsive personal
+                    portfolio website to showcase my projects, technical skills,
+                    internships, certifications, and professional journey
+                    through an immersive and interactive user experience. The
+                    portfolio serves as both a personal brand and a
+                    demonstration of my frontend development capabilities,
+                    combining modern design principles with optimized
+                    performance.<br /><br />The website was built using a
+                    modular component-based approach with a strong focus on
+                    visual hierarchy, usability, accessibility, and
+                    responsiveness.
+                  </p>
+
+                  <div class="project-hidden-details" style="display: none">
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      Every section was carefully designed to provide recruiters
+                      and visitors with a clear understanding of my technical
+                      expertise, development journey, and project experience
+                      while maintaining a clean, professional aesthetic.<br /><br />Implemented
+                      a wide range of advanced frontend features using
+                      <strong>HTML, CSS, and JavaScript</strong>, including a
+                      premium hero section, multi-theme system, interactive
+                      Bento Grid layouts, animated timeline components, project
+                      showcase, custom hover effects, scroll reveal animations,
+                      smooth page transitions, responsive navigation,
+                      glassmorphism effects, reusable UI components, and
+                      performance-optimized frontend architecture. Dynamic
+                      animations and theme-aware UI elements create a polished
+                      browsing experience while ensuring consistency across all
+                      sections of the website.<br /><br />The portfolio
+                      emphasizes clean code practices, reusable design systems,
+                      responsive layouts, accessibility standards, cross-browser
+                      compatibility, and smooth user interactions. Existing CSS
+                      variables were reused extensively to create a scalable
+                      theming system supporting multiple visual themes without
+                      affecting overall performance.<br /><br />Built as an
+                      evolving project, the portfolio continues to grow
+                      alongside my learning journey and demonstrates my passion
+                      for creating modern, interactive, and user-focused web
+                      applications while continuously exploring new frontend
+                      technologies and AI-assisted development workflows.
+                    </p>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Key Features:</strong>
+                    </p>
+                    <ul
+                      style="
+                        list-style-type: disc;
+                        font-size: 0.95rem;
+                        margin-left: 20px;
+                        padding-left: 10px;
+                        margin-top: 10px;
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                      "
+                    >
+                      <li>Premium Multi-Theme System</li>
+                      <li>Responsive Hero Section</li>
+                      <li>Interactive Bento Grid Layouts</li>
+                      <li>Project Showcase with Live Demos</li>
+                      <li>Animated Experience Timeline</li>
+                      <li>Smooth Scroll Reveal Animations</li>
+                      <li>Glassmorphism UI Components</li>
+                      <li>Custom Hover & Glow Effects</li>
+                      <li>Responsive Mobile-First Design</li>
+                      <li>Performance Optimization</li>
+                      <li>Cross-Browser Compatibility</li>
+                      <li>Accessibility-Oriented Design</li>
+                      <li>Modular Component Structure</li>
+                      <li>Reusable CSS Variable System</li>
+                    </ul>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript
+                      (ES6), CSS Variables, Local Storage, Intersection
+                      Observer, Responsive Design, CSS Animations, Mobile-First
+                      Design, Cross-Browser Compatibility, UI/UX Design
+                    </p>
+                  </div>
+                  <button class="details-toggle-btn">
+                    View Details
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+                <div class="project-highlights">
+                  <h4 class="highlights-title">Project Stats</h4>
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Multi-Theme System
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Interactive Bento Layout
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Premium Animations
+                    </li>
+                    <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                    <li><i class="fa-solid fa-check"></i> Project Showcase</li>
+                  </ul>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-js"></i> JavaScript (ES6)</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-code"></i> CSS Variables</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-database"></i> Local Storage</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-eye"></i> Intersection Observer</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-desktop"></i> Responsive Design</span
+                  >
+                </div>
+
+                <div class="project-footer">
+                  <span>Completed</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 04: Smart Calculator -->
+            <article
+              class="bento-card project-bento glass reveal-stagger tilt-card"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.2"
+            >
+              <div class="card-glow"></div>
+
+              <div class="project-preview browser-mockup">
+                <div class="browser-topbar">
+                  <div class="browser-address">Smart Calculator</div>
+                </div>
+                <div class="browser-content carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="Project/Sarthak Calculator 1.webp"
+                      alt="Sarthak Calculator 1"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Sarthak Calculator 2.webp"
+                      alt="Sarthak Calculator 2"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Sarthak Calculator 3.webp"
+                      alt="Sarthak Calculator 3"
+                      class="preview-img"
+                    />
+                    <img
+                      loading="lazy"
+                      src="Project/Sarthak Calculator 4.webp"
+                      alt="Sarthak Calculator 4"
+                      class="preview-img"
+                    />
+                  </div>
+                  <div class="preview-overlay">
+                    <a
+                      href="https://smart-calculator-sarthak.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn primary magnetic-sm"
+                    >
+                      View Live
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sarthak-ranjan/Smart-Calculator"
+                      target="_blank"
+                      rel="noopener"
+                      class="preview-btn secondary magnetic-sm"
+                    >
+                      GitHub <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  
+
+              </div>
+<div class="card-content project-content">
+                <div class="project-meta-top">
+                  <span class="project-number">04</span>
+                  <div
+                    class="status-badge"
+                    style="padding: 4px 10px; font-size: 0.75rem"
+                  >
+                    <div class="status-dot-green"></div>
+                    Live
+                  </div>
+                </div>
+                <div class="project-header">
+                  <h3 class="card-title">Smart Calculator</h3>
+
+                </div>
+                <div class="project-description">
+                  <p class="card-desc">
+                    Developed a modern, responsive, and feature-rich calculator
+                    application designed to provide a fast, intuitive, and
+                    efficient calculation experience across desktop and mobile
+                    devices.
+                  </p>
+
+                  <div class="project-hidden-details" style="display: none">
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      The project was built to go beyond a basic calculator by
+                      combining a clean user interface with advanced
+                      mathematical functionality and smooth user
+                      interactions.<br /><br />The calculator was designed with
+                      a strong emphasis on usability, accessibility, and
+                      performance, featuring a modern dashboard-inspired
+                      interface that allows users to perform both basic and
+                      scientific calculations with ease. Special attention was
+                      given to creating a distraction-free experience through
+                      thoughtful layouts, responsive components, and visually
+                      appealing animations.<br /><br />Implemented a wide range
+                      of interactive features using
+                      <strong>HTML, CSS, and JavaScript</strong>, including
+                      support for basic arithmetic operations, scientific
+                      calculations, keyboard shortcuts, calculation history,
+                      error handling, theme switching, responsive layouts,
+                      animated button interactions, and optimized input
+                      validation. The application provides instant feedback
+                      while ensuring accurate calculations and a seamless user
+                      experience.<br /><br />To improve maintainability and
+                      performance, the project follows modular JavaScript
+                      architecture, reusable UI components, optimized event
+                      handling, responsive design principles, and clean CSS
+                      organization. Smooth animations, hover effects,
+                      accessibility considerations, and cross-browser
+                      compatibility were incorporated to create a polished and
+                      production-quality interface.<br /><br />The application
+                      was built with scalability in mind, allowing additional
+                      mathematical functions and advanced features to be
+                      integrated easily in future versions. Throughout
+                      development, the primary focus remained on delivering a
+                      modern, responsive, and visually engaging calculator that
+                      demonstrates strong frontend development fundamentals and
+                      clean UI implementation.
+                    </p>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Key Features:</strong>
+                    </p>
+                    <ul
+                      style="
+                        list-style-type: disc;
+                        font-size: 0.95rem;
+                        margin-left: 20px;
+                        padding-left: 10px;
+                        margin-top: 10px;
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                      "
+                    >
+                      <li>Basic & Scientific Calculator</li>
+                      <li>Keyboard Shortcut Support</li>
+                      <li>Calculation History</li>
+                      <li>Theme Switching</li>
+                      <li>Responsive Mobile-First Design</li>
+                      <li>Input Validation & Error Handling</li>
+                      <li>Smooth Button Animations</li>
+                      <li>Clean & Modern User Interface</li>
+                      <li>Cross-Browser Compatibility</li>
+                      <li>Optimized JavaScript Logic</li>
+                      <li>Performance-Focused Frontend</li>
+                      <li>Accessibility-Oriented Design</li>
+                    </ul>
+
+                    <p
+                      class="card-desc"
+                      style="font-size: 0.95rem; margin-top: 15px"
+                    >
+                      <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript
+                      (ES6), Responsive Design, CSS Animations, Mobile-First
+                      Design, Cross-Browser Compatibility, UI/UX Design
+                    </p>
+                  </div>
+                  <button class="details-toggle-btn">
+                    View Details
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+                </div>
+                <div class="project-highlights">
+                  <h4 class="highlights-title">Project Stats</h4>
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Responsive CSS Grid
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Lazy Image Loading
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Fullscreen Preview
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Category Filtering
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i> Optimized Performance
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-brands fa-js"></i> JavaScript (ES6)</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-wand-magic-sparkles"></i> CSS
+                    Animations</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-triangle-exclamation"></i> Error
+                    Handling</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-pen-nib"></i> UI/UX Design</span
+                  >
+                  <span class="tech-chip"
+                    ><i class="fa-solid fa-sitemap"></i> DOM Manipulation</span
+                  >
+                </div>
+
+                <div class="project-footer">
+                  <span>Completed</span>
+                  <span>2026</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="more-projects-wrapper"
+            style="text-align: center; margin-top: 4rem; margin-bottom: 2rem"
+          >
+            <button id="openMoreProjectsBtn" class="more-projects-text-btn">
+              MORE PROJECTS+
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT STATS SECTION -->
+      <section class="impact-stats" style="padding: 2rem 0 6rem 0">
+        <div class="container reveal">
+          <div
+            class="stats-grid"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: var(--space-lg);
+              text-align: center;
+            "
+          >
+            <div
+              class="stat-bento glass magnetic-sm"
+              style="
+                padding: 3rem 1.5rem;
+                border-radius: var(--radius-lg);
+                background: linear-gradient(
+                  145deg,
+                  rgba(30, 30, 35, 0.4),
+                  rgba(15, 15, 18, 0.6)
+                );
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition:
+                  transform 0.3s ease,
+                  border-color 0.3s ease;
+              "
+            >
+              <h2
+                style="
+                  font-size: 3.5rem;
+                  color: var(--accent-primary);
+                  font-family: var(--font-heading);
+                  margin-bottom: 0.5rem;
+                  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+                "
+              >
+                <span class="counter" data-target="10">0</span>+
+              </h2>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                "
+              >
+                Projects
+              </p>
+            </div>
+
+            <div
+              class="stat-bento glass magnetic-sm"
+              style="
+                padding: 3rem 1.5rem;
+                border-radius: var(--radius-lg);
+                background: linear-gradient(
+                  145deg,
+                  rgba(30, 30, 35, 0.4),
+                  rgba(15, 15, 18, 0.6)
+                );
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition:
+                  transform 0.3s ease,
+                  border-color 0.3s ease;
+              "
+            >
+              <h2
+                style="
+                  font-size: 3.5rem;
+                  color: var(--accent-primary);
+                  font-family: var(--font-heading);
+                  margin-bottom: 0.5rem;
+                  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+                "
+              >
+                <span class="counter" data-target="4">0</span>+
+              </h2>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                "
+              >
+                Languages
+              </p>
+            </div>
+
+            <div
+              class="stat-bento glass magnetic-sm"
+              style="
+                padding: 3rem 1.5rem;
+                border-radius: var(--radius-lg);
+                background: linear-gradient(
+                  145deg,
+                  rgba(30, 30, 35, 0.4),
+                  rgba(15, 15, 18, 0.6)
+                );
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition:
+                  transform 0.3s ease,
+                  border-color 0.3s ease;
+              "
+            >
+              <h2
+                style="
+                  font-size: 3.5rem;
+                  color: var(--accent-primary);
+                  font-family: var(--font-heading);
+                  margin-bottom: 0.5rem;
+                  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+                "
+              >
+                <span class="counter" data-target="3">0</span>
+              </h2>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                "
+              >
+                Internships
+              </p>
+            </div>
+
+            <div
+              class="stat-bento glass magnetic-sm"
+              style="
+                padding: 3rem 1.5rem;
+                border-radius: var(--radius-lg);
+                background: linear-gradient(
+                  145deg,
+                  rgba(30, 30, 35, 0.4),
+                  rgba(15, 15, 18, 0.6)
+                );
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition:
+                  transform 0.3s ease,
+                  border-color 0.3s ease;
+              "
+            >
+              <h2
+                style="
+                  font-size: 3.5rem;
+                  color: var(--accent-primary);
+                  font-family: var(--font-heading);
+                  margin-bottom: 0.5rem;
+                  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+                "
+              >
+                <span class="counter" data-target="15000">0</span>+
+              </h2>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  font-size: 1.1rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                "
+              >
+                Lines of Code
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="experience section-padding" id="experience">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-desc">
+              Building practical skills through internships, leadership, and
+              real-world development experience.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item timeline-item-scroll">
+              <div class="timeline-dot"></div>
+              <div
+                class="timeline-content bento-card glass"
+                data-tilt
+                data-tilt-max="3"
+                data-tilt-glare
+                data-tilt-max-glare="0.1"
+                style="border-color: rgba(139, 92, 246, 0.4)"
+              >
+                <div
+                  class="timeline-header"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <img
+                    loading="lazy"
+                    src="internship logo/IOCL logo.jpg?v=2"
+                    alt="IOCL Logo"
+                    class="company-logo"
+                  />
+                  <div class="timeline-meta" style="margin-bottom: 0">
+                    <span class="date">Jun 2026 – 1 month</span>
+                    <span class="company">IOCL - Barauni, Bihar</span>
+                  </div>
+                  <a
+                    href="https://iocl-project-y442.onrender.com/"
+                    target="_blank"
+                    class="card-top-link magnetic-sm"
+                  >
+                    <i class="fa-solid fa-link"></i> IOCL News Portal
+                  </a>
+                </div>
+                <h3 class="role">
+                  Frontend Developer Intern
+                  <span
+                    class="featured-badge"
+                    style="
+                      background: var(--accent-primary);
+                      color: white;
+                      padding: 3px 10px;
+                      border-radius: 12px;
+                      font-size: 0.65rem;
+                      font-weight: bold;
+                      margin-left: 10px;
+                      text-transform: uppercase;
+                      letter-spacing: 1px;
+                      box-shadow: 0 0 10px var(--accent-glow);
+                      vertical-align: middle;
+                    "
+                    >Industrial Training</span
+                  >
+                </h3>
+
+                <div class="exp-media-gallery carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="experince/IOCL News Portal 1.webp"
+                      alt="IOCL News Portal 1"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/IOCL News Portal 2.webp"
+                      alt="IOCL News Portal 2"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/IOCL News Portal 3.webp"
+                      alt="IOCL News Portal 3"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/IOCL News Portal 4.webp"
+                      alt="IOCL News Portal 4"
+                      class="exp-thumbnail"
+                    />
+                  </div>
+                  <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+
+                <button class="impact-toggle-btn magnetic-sm">
+                  View Impact Details <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="impact-dropdown">
+                  <ul class="duties">
+                    <li>
+                      Delivered a fully responsive news portal (<a
+                        href="https://iocl-project-y442.onrender.com/"
+                        target="_blank"
+                        class="inline-link"
+                        style="
+                          color: var(--accent-primary);
+                          font-weight: 500;
+                          text-decoration: none;
+                          border-bottom: 1px dashed var(--accent-primary);
+                        "
+                        >IOCL News Portal
+                        <i
+                          class="fa-solid fa-arrow-up-right-from-square"
+                          style="font-size: 0.75rem"
+                        ></i></a
+                      >) with cross-browser compatibility across Chrome, Firefox
+                      and Edge using semantic HTML5, CSS3 and JavaScript.
+                    </li>
+                    <li>
+                      Improved content availability to near-zero downtime during
+                      API failures with a fetch()-based REST integration and
+                      static fallback.
+                    </li>
+                    <li>
+                      Maintained WCAG 2.1 AA accessibility across all UI
+                      components with semantic landmarks and keyboard
+                      navigation.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <i class="fa-solid fa-server"></i> REST API
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-regular fa-newspaper"></i> Dynamic News Portal
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-mobile-screen"></i> Responsive Design
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-universal-access"></i> WCAG
+                    Accessibility
+                  </div>
+                </div>
+                <div class="exp-tech-stack mt-3">
+                  <span class="tech-chip" data-tooltip="Semantic structure"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip" data-tooltip="Custom styling & layout"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Dynamic DOM & API fetching"
+                    ><i class="fa-brands fa-js"></i> JavaScript</span
+                  >
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Keyboard navigation & ARIA"
+                    ><i class="fa-solid fa-universal-access"></i> WCAG 2.1</span
+                  >
+                </div>
+                <div class="exp-stats">
+                  <div class="stat-group">
+                    <span class="stat-label">Projects</span>
+                    <span class="stat-value">1</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Duration</span>
+                    <span class="stat-value">1 Month</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Technologies</span>
+                    <span class="stat-value">5+</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Type</span>
+                    <span class="stat-value">Industrial Training</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value">Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. CodeAlpha -->
+            <div class="timeline-item timeline-item-scroll">
+              <div class="timeline-dot"></div>
+              <div
+                class="timeline-content bento-card glass"
+                data-tilt
+                data-tilt-max="3"
+                data-tilt-glare
+                data-tilt-max-glare="0.1"
+              >
+                <div
+                  class="timeline-header"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <img
+                    loading="lazy"
+                    src="internship logo/codealpha logo.webp"
+                    alt="CodeAlpha Logo"
+                    class="company-logo"
+                  />
+                  <div class="timeline-meta" style="margin-bottom: 0">
+                    <span class="date">Jul 2026 – 1 month</span>
+                    <span class="company">CodeAlpha - Remote</span>
+                  </div>
+                  <a
+                    href="https://sarthak-ranjan.github.io/Sarthak-Gallery/"
+                    target="_blank"
+                    class="card-top-link magnetic-sm"
+                  >
+                    <i class="fa-solid fa-link"></i> Sarthak Gallery
+                  </a>
+                </div>
+                <h3 class="role">Frontend Developer Intern</h3>
+
+                <div class="exp-media-gallery carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="experince/Responsive Image Gallery 1.webp"
+                      alt="Responsive Image Gallery 1"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Responsive Image Gallery 2.webp"
+                      alt="Responsive Image Gallery 2"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Responsive Image Gallery 3.webp"
+                      alt="Responsive Image Gallery 3"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Responsive Image Gallery 4.webp"
+                      alt="Responsive Image Gallery 4"
+                      class="exp-thumbnail"
+                    />
+                  </div>
+                  <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+
+                <button class="impact-toggle-btn magnetic-sm">
+                  View Impact Details <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="impact-dropdown">
+                  <ul class="duties">
+                    <li>
+                      Shipped 3 responsive frontend projects, including
+                      <a
+                        href="https://sarthak-ranjan.github.io/Sarthak-Gallery/"
+                        target="_blank"
+                        class="inline-link"
+                        style="
+                          color: var(--accent-primary);
+                          font-weight: 500;
+                          text-decoration: none;
+                          border-bottom: 1px dashed var(--accent-primary);
+                        "
+                        >Sarthak Gallery
+                        <i
+                          class="fa-solid fa-arrow-up-right-from-square"
+                          style="font-size: 0.75rem"
+                        ></i></a
+                      >, with consistent cross-browser rendering using CSS Grid,
+                      Flexbox and vendor-prefixed fallbacks.
+                    </li>
+                    <li>
+                      Improved gallery load performance by ~40% by lazy-loading
+                      images and compressing assets.
+                    </li>
+                    <li>
+                      Maintained 100% version history traceability via
+                      structured Git commits and GitHub documentation.
+                    </li>
+                  </ul>
+                </div>
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <i class="fa-solid fa-mobile-screen"></i> Responsive UI
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-bolt"></i> Performance Optimized
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-brands fa-chrome"></i> Cross-Browser
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-brands fa-git-alt"></i> Git Workflow
+                  </div>
+                </div>
+                <div class="exp-tech-stack mt-3">
+                  <span class="tech-chip" data-tooltip="Complex 2D layouts"
+                    ><i class="fa-solid fa-border-all"></i> CSS Grid</span
+                  >
+                  <span class="tech-chip" data-tooltip="Fluid UI structure"
+                    ><i class="fa-solid fa-table-columns"></i> Flexbox</span
+                  >
+                  <span class="tech-chip" data-tooltip="Version control mastery"
+                    ><i class="fa-brands fa-git-alt"></i> Git</span
+                  >
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Lazy loading & minification"
+                    ><i class="fa-solid fa-gauge-high"></i> Performance
+                    Tuning</span
+                  >
+                </div>
+                <div class="exp-stats">
+                  <div class="stat-group">
+                    <span class="stat-label">Projects</span>
+                    <span class="stat-value">3</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Duration</span>
+                    <span class="stat-value">1 Month</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Type</span>
+                    <span class="stat-value">Remote</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Technologies</span>
+                    <span class="stat-value">4+</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value">Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Codsoft -->
+            <div class="timeline-item timeline-item-scroll">
+              <div class="timeline-dot"></div>
+              <div
+                class="timeline-content bento-card glass"
+                data-tilt
+                data-tilt-max="3"
+                data-tilt-glare
+                data-tilt-max-glare="0.1"
+              >
+                <div
+                  class="timeline-header"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <img
+                    loading="lazy"
+                    src="internship logo/Codsoft logo.png?v=2"
+                    alt="Codsoft Logo"
+                    class="company-logo"
+                  />
+                  <div class="timeline-meta" style="margin-bottom: 0">
+                    <span class="date">Aug 2026 – Present</span>
+                    <span class="company">Codsoft - Remote</span>
+                  </div>
+                  <a
+                    href="https://smart-calculator-sarthak.netlify.app/"
+                    target="_blank"
+                    class="card-top-link magnetic-sm"
+                  >
+                    <i class="fa-solid fa-link"></i> Smart Calculator
+                  </a>
+                </div>
+                <h3 class="role">Web Developer Intern</h3>
+
+                <div class="exp-media-gallery carousel-container">
+                  <div class="carousel-track">
+                    <img
+                      loading="lazy"
+                      src="experince/Sarthak Calculator 1.webp"
+                      alt="Sarthak Calculator 1"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Sarthak Calculator 2.webp"
+                      alt="Sarthak Calculator 2"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Sarthak Calculator 3.webp"
+                      alt="Sarthak Calculator 3"
+                      class="exp-thumbnail"
+                    />
+                    <img
+                      loading="lazy"
+                      src="experince/Sarthak Calculator 4.webp"
+                      alt="Sarthak Calculator 4"
+                      class="exp-thumbnail"
+                    />
+                  </div>
+                  <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+
+                <button class="impact-toggle-btn magnetic-sm">
+                  View Impact Details <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="impact-dropdown">
+                  <ul class="duties">
+                    <li>
+                      Developed dynamic, interactive, and fully responsive
+                      frontend applications like
+                      <a
+                        href="https://smart-calculator-sarthak.netlify.app/"
+                        target="_blank"
+                        class="inline-link"
+                        style="
+                          color: var(--accent-primary);
+                          font-weight: 500;
+                          text-decoration: none;
+                          border-bottom: 1px dashed var(--accent-primary);
+                        "
+                        >Smart Calculator
+                        <i
+                          class="fa-solid fa-arrow-up-right-from-square"
+                          style="font-size: 0.75rem"
+                        ></i
+                      ></a>
+                      using HTML5, CSS3, and modern JavaScript.
+                    </li>
+                    <li>
+                      Optimized UI/UX components to ensure seamless cross-device
+                      compatibility and improved load times.
+                    </li>
+                    <li>
+                      Collaborated via Git/GitHub to maintain clean version
+                      control and structured project documentation.
+                    </li>
+                  </ul>
+                </div>
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <i class="fa-solid fa-calculator"></i> Interactive
+                    Calculator
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-brands fa-js"></i> JavaScript Logic
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-mobile-screen"></i> Mobile Responsive
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-palette"></i> Modern UI
+                  </div>
+                </div>
+                <div class="exp-tech-stack mt-3">
+                  <span class="tech-chip" data-tooltip="Structure & Layout"
+                    ><i class="fa-brands fa-html5"></i> HTML5</span
+                  >
+                  <span class="tech-chip" data-tooltip="Modern animations"
+                    ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+                  >
+                  <span class="tech-chip" data-tooltip="Complex computation"
+                    ><i class="fa-brands fa-js"></i> JavaScript</span
+                  >
+                  <span class="tech-chip" data-tooltip="Cross-device support"
+                    ><i class="fa-solid fa-mobile-screen"></i> Responsive
+                    Design</span
+                  >
+                </div>
+                <div class="exp-stats">
+                  <div class="stat-group">
+                    <span class="stat-label">Projects</span>
+                    <span class="stat-value">3</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Duration</span>
+                    <span class="stat-value">1 Month</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Type</span>
+                    <span class="stat-value">Virtual</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Technologies</span>
+                    <span class="stat-value">4+</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value">Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Technical Lead (Unchanged) -->
+            <div class="timeline-item timeline-item-scroll">
+              <div class="timeline-dot"></div>
+              <div
+                class="timeline-content bento-card glass"
+                data-tilt
+                data-tilt-max="3"
+                data-tilt-glare
+                data-tilt-max-glare="0.1"
+              >
+                <div
+                  class="timeline-header"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <img
+                    loading="lazy"
+                    src="internship logo/srmu logo.webp"
+                    alt="SRMU Logo"
+                    class="company-logo"
+                  />
+                  <div class="timeline-meta" style="margin-bottom: 0">
+                    <span class="date">2024 - 2025</span>
+                    <span class="company">SRMU Tech Club</span>
+                  </div>
+                </div>
+                <h3 class="role">Technical Lead</h3>
+
+                <button class="impact-toggle-btn magnetic-sm">
+                  View Impact Details <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="impact-dropdown">
+                  <ul class="duties">
+                    <li>
+                      Led technical operations for 2 college-wide events,
+                      coordinating 8 student volunteers for 300+ attendees.
+                    </li>
+                    <li>
+                      Served as Prize Coordination Head for the annual fest,
+                      owning award logistics across 12 event categories.
+                    </li>
+                  </ul>
+                </div>
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <i class="fa-solid fa-users"></i> 300+ Participants
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-microphone"></i> Event Coordination
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-handshake"></i> Team Leadership
+                  </div>
+                  <div class="impact-item">
+                    <i class="fa-solid fa-trophy"></i> Technical Events
+                  </div>
+                </div>
+                <div class="exp-tech-stack mt-3">
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Event coordination & delegation"
+                    ><i class="fa-solid fa-users-gear"></i> Team
+                    Management</span
+                  >
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Decision-making & mentoring"
+                    ><i class="fa-solid fa-chalkboard-user"></i> Technical
+                    Leadership</span
+                  >
+                  <span
+                    class="tech-chip"
+                    data-tooltip="Public speaking & negotiation"
+                    ><i class="fa-solid fa-comments"></i> Communication</span
+                  >
+                </div>
+                <div class="exp-stats">
+                  <div class="stat-group">
+                    <span class="stat-label">Events</span>
+                    <span class="stat-value">2</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Participants</span>
+                    <span class="stat-value">300+</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Role</span>
+                    <span class="stat-value">Technical Lead</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Volunteers</span>
+                    <span class="stat-value">8+</span>
+                  </div>
+                  <div class="stat-group">
+                    <span class="stat-label">Duration</span>
+                    <span class="stat-value">1 Year</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Hire Me Call to Action -->
+            <div class="timeline-item timeline-item-scroll">
+              <div
+                class="timeline-dot"
+                style="
+                  border-style: dashed;
+                  border-width: 2px;
+                  border-color: var(--accent-secondary);
+                  background: transparent;
+                "
+              ></div>
+              <div
+                class="timeline-content bento-card glass"
+                style="
+                  border: 2px dashed rgba(139, 92, 246, 0.4);
+                  text-align: center;
+                  background: rgba(139, 92, 246, 0.02);
+                  padding: 40px 20px;
+                "
+              >
+                <h3
+                  style="
+                    font-size: 1.8rem;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    color: var(--text-main);
+                  "
+                >
+                  <i
+                    class="fa-solid fa-building"
+                    style="color: var(--accent-primary); margin-right: 10px"
+                  ></i
+                  >Your Company?
+                </h3>
+                <p
+                  style="
+                    color: var(--text-muted);
+                    margin-bottom: 20px;
+                    font-size: 1.05rem;
+                  "
+                >
+                  I'm currently looking for
+                </p>
+
+                <div
+                  class="exp-tech-stack"
+                  style="
+                    justify-content: center;
+                    margin-bottom: 25px;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                  "
+                >
+                  <span
+                    class="tech-chip"
+                    style="
+                      background: rgba(139, 92, 246, 0.1);
+                      border-color: var(--accent-primary);
+                      color: var(--text-main);
+                    "
+                    ><i class="fa-solid fa-code"></i> Frontend</span
+                  >
+                  <span
+                    class="tech-chip"
+                    style="
+                      background: rgba(139, 92, 246, 0.1);
+                      border-color: var(--accent-primary);
+                      color: var(--text-main);
+                    "
+                    ><i class="fa-brands fa-react"></i> React</span
+                  >
+                  <span
+                    class="tech-chip"
+                    style="
+                      background: rgba(139, 92, 246, 0.1);
+                      border-color: var(--accent-primary);
+                      color: var(--text-main);
+                    "
+                    ><i class="fa-solid fa-layer-group"></i> Full Stack</span
+                  >
+                  <span
+                    class="tech-chip"
+                    style="
+                      background: rgba(139, 92, 246, 0.1);
+                      border-color: var(--accent-primary);
+                      color: var(--text-main);
+                    "
+                    ><i class="fa-solid fa-laptop-code"></i> Software
+                    Development</span
+                  >
+                </div>
+
+                <p
+                  style="
+                    color: var(--text-muted);
+                    margin-bottom: 30px;
+                    font-size: 1.05rem;
+                  "
+                >
+                  opportunities. Let's build something together!
+                </p>
+
+                <a
+                  href="#contact"
+                  class="btn btn-primary magnetic"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 12px 30px;
+                    font-size: 1rem;
+                    border-radius: 30px;
+                    margin: 0 auto;
+                    text-decoration: none;
+                  "
+                >
+                  Hire Me <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK MARQUEE SECTION -->
+      <section
+        class="tech-marquee-section"
+        style="
+          padding: 2rem 0;
+          overflow: hidden;
+          background: rgba(10, 10, 15, 0.4);
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        "
+      >
+        <div class="tech-marquee-container">
+          <div class="tech-marquee-track">
+            <!-- Duplicate items for seamless infinite scroll -->
+            <!-- SET 1 -->
+            <i class="devicon-html5-plain tech-icon" data-tooltip="HTML5"></i>
+            <i class="devicon-css3-plain tech-icon" data-tooltip="CSS3"></i>
+            <i
+              class="devicon-javascript-plain tech-icon"
+              data-tooltip="JavaScript"
+            ></i>
+            <i
+              class="devicon-react-original tech-icon"
+              data-tooltip="React"
+            ></i>
+            <i class="devicon-python-plain tech-icon" data-tooltip="Python"></i>
+            <i class="devicon-java-plain tech-icon" data-tooltip="Java"></i>
+            <i class="devicon-git-plain tech-icon" data-tooltip="Git"></i>
+            <i
+              class="devicon-github-original tech-icon"
+              data-tooltip="GitHub"
+            ></i>
+            <i
+              class="devicon-vscode-plain tech-icon"
+              data-tooltip="VS Code"
+            ></i>
+            <i
+              class="devicon-nodejs-plain tech-icon"
+              data-tooltip="Node.js"
+            ></i>
+            <i
+              class="devicon-tailwindcss-original tech-icon"
+              data-tooltip="Tailwind CSS"
+            ></i>
+            <i class="devicon-figma-plain tech-icon" data-tooltip="Figma"></i>
+            <!-- SET 2 -->
+            <i class="devicon-html5-plain tech-icon" data-tooltip="HTML5"></i>
+            <i class="devicon-css3-plain tech-icon" data-tooltip="CSS3"></i>
+            <i
+              class="devicon-javascript-plain tech-icon"
+              data-tooltip="JavaScript"
+            ></i>
+            <i
+              class="devicon-react-original tech-icon"
+              data-tooltip="React"
+            ></i>
+            <i class="devicon-python-plain tech-icon" data-tooltip="Python"></i>
+            <i class="devicon-java-plain tech-icon" data-tooltip="Java"></i>
+            <i class="devicon-git-plain tech-icon" data-tooltip="Git"></i>
+            <i
+              class="devicon-github-original tech-icon"
+              data-tooltip="GitHub"
+            ></i>
+            <i
+              class="devicon-vscode-plain tech-icon"
+              data-tooltip="VS Code"
+            ></i>
+            <i
+              class="devicon-nodejs-plain tech-icon"
+              data-tooltip="Node.js"
+            ></i>
+            <i
+              class="devicon-tailwindcss-original tech-icon"
+              data-tooltip="Tailwind CSS"
+            ></i>
+            <i class="devicon-figma-plain tech-icon" data-tooltip="Figma"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <section class="education section-padding" id="education">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Credentials</span>
+            <h2 class="section-title">Education & Certifications</h2>
+            <p class="section-desc">
+              Education, certifications, and continuous learning that shape my
+              technical growth.
+            </p>
+          </div>
+
+          <div class="edu-grid">
+            <!-- Left Column: Academic Journey -->
+            <div class="edu-col reveal-stagger">
+              <h3 class="col-title">
+                <i class="fa-solid fa-book-open"></i> Academic Journey
+              </h3>
+
+              <!-- Featured B.Tech Card -->
+              <div class="featured-edu-card bento-card glass">
+                <div class="featured-header">
+                  <div class="edu-logo-wrapper">
+                    <img
+                      loading="lazy"
+                      src="Education/SRMU logo.webp"
+                      alt="SRMU Logo"
+                      class="edu-logo"
+                    />
+                  </div>
+                  <div class="featured-title">
+                    <h4>B.Tech CSE (Data Science & AI)</h4>
+                    <p>Shri Ramswaroop Memorial University</p>
+                  </div>
+                </div>
+
+                <ul class="edu-details-list">
+                  <li><i class="fa-solid fa-location-dot"></i> Lucknow, UP</li>
+                  <li>
+                    <i class="fa-solid fa-graduation-cap"></i> 2023 – 2027
+                  </li>
+                  <li class="cgpa-visual">
+                    <span class="cgpa-label">CGPA</span>
+                    <span class="cgpa-bar-wrapper">
+                      <span class="cgpa-bar-base"></span>
+                      <span class="cgpa-bar-fill" style="width: 75%;"></span>
+                    </span>
+                    <span class="cgpa-score">7.5/10</span>
+                  </li>
+                  <li class="status-live">
+                    <i class="fa-solid fa-circle"></i> Currently Pursuing
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider -->
+              <div class="history-divider">
+                <span>Academic History</span>
+              </div>
+
+              <!-- History Grid (Class XII & X) -->
+              <div class="history-grid">
+                <div class="history-card bento-card glass">
+                  <i class="fa-solid fa-school history-icon"></i>
+                  <h4>Oxford Public School</h4>
+                  <p class="course">CBSE Class XII</p>
+                  <div class="history-meta">
+                    <span class="score">75%</span>
+                    <span class="year">2021 – 2023</span>
+                  </div>
+                </div>
+
+                <div class="history-card bento-card glass">
+                  <i class="fa-solid fa-school history-icon"></i>
+                  <h4>Oxford Public School</h4>
+                  <p class="course">CBSE Class X</p>
+                  <div class="history-meta">
+                    <span class="score">70%</span>
+                    <span class="year">2019 – 2021</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone Stats Card -->
+              <div
+                class="learning-card bento-card glass tilt-card"
+                data-tilt
+                data-tilt-max="5"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.2"
+                style="margin-top: 2rem"
+              >
+                <div class="card-glow"></div>
+                <h4
+                  style="
+                    font-size: 1.1rem;
+                    margin-bottom: 15px;
+                    color: var(--text-main);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-chart-line"
+                    style="color: var(--accent-primary)"
+                  ></i>
+                  Milestone Stats
+                </h4>
+                <div
+                  class="learning-grid"
+                  style="
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                  "
+                >
+                  <div class="learning-item">
+                    <i
+                      class="fa-solid fa-graduation-cap"
+                      style="color: #4caf50"
+                    ></i>
+                    <span><strong class="gradient-text">1</strong> Degree</span>
+                  </div>
+                  <div class="learning-item">
+                    <i class="fa-solid fa-briefcase" style="color: #ff9800"></i>
+                    <span
+                      ><strong class="gradient-text">3+</strong>
+                      Internships</span
+                    >
+                  </div>
+                  <div class="learning-item">
+                    <i
+                      class="fa-solid fa-laptop-code"
+                      style="color: #2196f3"
+                    ></i>
+                    <span
+                      ><strong class="gradient-text">15+</strong> Projects</span
+                    >
+                  </div>
+                  <div class="learning-item">
+                    <i
+                      class="fa-solid fa-certificate"
+                      style="color: #ffd700"
+                    ></i>
+                    <span
+                      ><strong class="gradient-text">20+</strong>
+                      Certificates</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Certifications -->
+            <div class="edu-col reveal-stagger">
+              <h3 class="col-title">
+                <i class="fa-solid fa-certificate"></i> Certifications & Skills
+              </h3>
+
+              <div class="history-grid cert-grid-override">
+                <!-- IOCL Cert -->
+                <a
+                  href="Education/certificates/IOCL Internship certificate.jpeg"
+                  target="_blank"
+                  class="history-card cert-card-lg bento-card glass tilt-card"
+                  data-tilt
+                  data-tilt-max="10"
+                  data-tilt-speed="400"
+                  data-tilt-glare
+                  data-tilt-max-glare="0.3"
+                >
+                  <img
+                    loading="lazy"
+                    src="Education/certificate logo/IOCL certificate logo.jpg"
+                    alt="IOCL Logo"
+                    class="history-icon cert-logo-img"
+                  />
+                  <h4>Internship Certificate</h4>
+                  <p class="course">IOCL</p>
+                  <p class="year" style="margin-top: 4px">Issued 2026</p>
+                  <div class="history-meta cert-meta-override">
+                    <span class="cert-btn"
+                      >View Certificate <i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                  </div>
+                </a>
+
+                <!-- Claude Cert -->
+                <a
+                  href="Education/certificates/AI Capabilities and Limitations certificate.pdf"
+                  target="_blank"
+                  class="history-card cert-card-lg bento-card glass tilt-card"
+                  data-tilt
+                  data-tilt-max="10"
+                  data-tilt-speed="400"
+                  data-tilt-glare
+                  data-tilt-max-glare="0.3"
+                >
+                  <img
+                    loading="lazy"
+                    src="Education/certificate logo/AI Capabilities and Limitations certificate logo.webp"
+                    alt="Claude Logo"
+                    class="history-icon cert-logo-img"
+                  />
+                  <h4>AI Capabilities and Limitations</h4>
+                  <p class="course">Claude</p>
+                  <p class="year" style="margin-top: 4px">Issued 2025</p>
+                  <div class="history-meta cert-meta-override">
+                    <span class="cert-btn"
+                      >View Certificate <i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                  </div>
+                </a>
+
+                <!-- IBM Cert -->
+                <a
+                  href="Education/certificates/AI Fundamentals for Understanding AI  certificate.pdf"
+                  target="_blank"
+                  class="history-card cert-card-lg bento-card glass tilt-card"
+                  data-tilt
+                  data-tilt-max="10"
+                  data-tilt-speed="400"
+                  data-tilt-glare
+                  data-tilt-max-glare="0.3"
+                >
+                  <img
+                    loading="lazy"
+                    src="Education/certificate logo/AI Fundamentals for Understanding AI  certificate logo.webp"
+                    alt="IBM Logo"
+                    class="history-icon cert-logo-img"
+                  />
+                  <h4>AI Fundamentals for Understanding AI</h4>
+                  <p class="course">IBM</p>
+                  <p class="year" style="margin-top: 4px">Issued 2024</p>
+                  <div class="history-meta cert-meta-override">
+                    <span class="cert-btn"
+                      >View Certificate <i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                  </div>
+                </a>
+
+                <!-- Microsoft & LinkedIn Cert -->
+                <a
+                  href="Education/certificates/Career Essentials in Generative AI by Microsoft and LinkedIn Certificate.pdf"
+                  target="_blank"
+                  class="history-card cert-card-lg bento-card glass tilt-card"
+                  data-tilt
+                  data-tilt-max="10"
+                  data-tilt-speed="400"
+                  data-tilt-glare
+                  data-tilt-max-glare="0.3"
+                >
+                  <img
+                    loading="lazy"
+                    src="Education/certificate logo/Career Essentials in Generative AI by Microsoft and LinkedIn Certificate logo.webp"
+                    alt="Microsoft LinkedIn Logo"
+                    class="history-icon cert-logo-img"
+                  />
+                  <h4>Career Essentials in Generative AI</h4>
+                  <p class="course">Microsoft & LinkedIn</p>
+                  <p class="year" style="margin-top: 4px">Issued 2024</p>
+                  <div class="history-meta cert-meta-override">
+                    <span class="cert-btn"
+                      >View Certificate <i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Floating Pills -->
+              <div class="pill-cloud floating-orbs" style="margin-top: 2rem">
+                <span class="pill floating-pill pill-1">L&T Web Design</span>
+                <span class="pill floating-pill pill-2">L&T Java</span>
+                <span class="pill floating-pill pill-3">Net Zero 2070</span>
+                <span class="pill floating-pill pill-4"
+                  >Microsoft AI Skills Challenge</span
+                >
+                <span class="pill floating-pill pill-5"
+                  >Copilot Fundamentals</span
+                >
+              </div>
+
+              <!-- Premium 12+ Certificates Badge -->
+              <div
+                class="premium-cert-count tilt-card"
+                data-tilt
+                data-tilt-max="5"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.2"
+              >
+                <div class="premium-cert-content">
+                  <i class="fa-solid fa-medal premium-cert-icon"></i>
+                  <span
+                    ><span
+                      class="gradient-text"
+                      style="font-size: 1.5rem; font-weight: 800"
+                      >12+</span
+                    >
+                    Certificates Earned</span
+                  >
+                </div>
+              </div>
+
+              <!-- Continuous Learning Card -->
+              <div
+                class="learning-card bento-card glass tilt-card"
+                data-tilt
+                data-tilt-max="5"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.2"
+                style="margin-top: 2rem"
+              >
+                <div class="card-glow"></div>
+                <h4
+                  style="
+                    font-size: 1.1rem;
+                    margin-bottom: 15px;
+                    color: var(--text-main);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-spinner fa-spin"
+                    style="color: var(--accent-primary)"
+                  ></i>
+                  Currently Learning
+                </h4>
+                <div class="learning-grid">
+                  <div class="learning-item">
+                    <i class="fa-brands fa-react" style="color: #61dafb"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="learning-item">
+                    <i class="fa-solid fa-globe" style="color: #4caf50"></i>
+                    <span>Full Stack</span>
+                  </div>
+                  <div class="learning-item">
+                    <i class="fa-solid fa-brain" style="color: #e91e63"></i>
+                    <span>AI Integration</span>
+                  </div>
+                  <div class="learning-item">
+                    <i
+                      class="fa-solid fa-mobile-screen"
+                      style="color: #2196f3"
+                    ></i>
+                    <span>Modern UI</span>
+                  </div>
+                  <div class="learning-item">
+                    <i class="fa-brands fa-node-js" style="color: #8cc84b"></i>
+                    <span>Node.js</span>
+                  </div>
+                  <div class="learning-item">
+                    <i class="fa-solid fa-database" style="color: #ff9800"></i>
+                    <span>MongoDB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY QUOTE -->
+      <section class="philosophy-quote reveal">
+        <div class="container">
+          <div
+            class="quote-wrapper tilt-card"
+            data-tilt
+            data-tilt-max="2"
+            data-tilt-speed="400"
+            data-tilt-glare
+            data-tilt-max-glare="0.1"
+          >
+            <div class="quote-divider-top"></div>
+            <blockquote class="quote-text">
+              "Great software isn't just built with code. It's built with
+              curiosity, creativity, and
+              <span class="gradient-text">continuous learning.</span>"
+            </blockquote>
+            <div class="quote-author">— Sarthak Ranjan</div>
+            <div class="quote-divider-bottom"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer class="footer" id="contact">
+      <div class="aurora-bg"></div>
+      <div class="container">
+        <!-- CTA Flip Container -->
+        <div class="cta-box flip-container reveal">
+          <div class="flip-inner" id="ctaFlipInner">
+            <!-- Front Face: CTA -->
+            <div class="flip-front bento-card highlight">
+              <div class="card-glow"></div>
+              <div class="card-content text-center">
+                <h2 class="cta-title">
+                  Let's build something <br /><span class="gradient-text"
+                    >worth shipping.</span
+                  >
+                </h2>
+                <p class="cta-desc">
+                  Open to full-stack and frontend opportunities — always happy
+                  to talk about web development or where AI fits into it.
+                </p>
+                <button
+                  class="btn btn-primary magnetic say-hello-btn"
+                  id="sayHelloBtn"
+                >
+                  <span>Say Hello</span>
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Back Face: Form -->
+            <div class="flip-back bento-card highlight">
+              <button
+                class="close-modal magnetic-sm"
+                id="closeFlipBtn"
+                style="position: absolute; top: 15px; right: 15px"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="card-content">
+                <h2
+                  style="
+                    margin-bottom: 1rem;
+                    color: var(--text-main);
+                    font-size: 1.5rem;
+                  "
+                >
+                  Contact Me
+                </h2>
+                <form id="contactForm" class="contact-form">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="1086d0c3-4487-42d1-94f8-b9dca15317c9"
+                  />
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="name"
+                      required
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        id="contactEmail"
+                        name="email"
+                        required
+                        placeholder="Your Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="contactSubject"
+                        name="subject"
+                        required
+                        placeholder="Subject"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      id="contactMessage"
+                      name="message"
+                      required
+                      placeholder="Your Message"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    id="contactSubmitBtn"
+                    class="btn btn-primary magnetic form-submit-btn"
+                  >
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-bento-grid reveal">
+          <!-- Status & Time Card -->
+          <div
+            class="contact-social-card bento-card glass status-card"
+            style="
+              grid-column: 1 / -1;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              text-align: left;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div class="social-info" style="align-items: flex-start">
+                <span class="social-label">Based in Lucknow, India</span>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <div class="status-pulse"></div>
+                  </div>
+                  <span class="social-value" style="color: #10b981"
+                    >Available for Opportunities</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="time-display" style="text-align: right">
+              <div
+                class="social-label"
+                style="
+                  font-size: 0.75rem;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  color: var(--text-dim);
+                "
+              >
+                Local Time
+              </div>
+              <div
+                class="social-value"
+                id="liveTime"
+                style="
+                  font-family: monospace;
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  color: var(--text-main);
+                "
+              >
+                --:--:--
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="mailto:sarthakranjan077@gmail.com"
+            class="contact-social-card bento-card glass email-card copy-text"
+            id="emailCard"
+            data-copy="sarthakranjan077@gmail.com"
+          >
+            <div class="social-icon" id="emailIcon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-label">Email</span>
+              <span class="social-value" id="emailValue"
+                >sarthakranjan077@gmail.com</span
+              >
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/sarthak_ranjan_07?igsh=MW5wOTBmd3h2Y3Jndg=="
+            target="_blank"
+            rel="noopener"
+            class="contact-social-card bento-card glass instagram-card"
+          >
+            <div class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-label">Instagram</span>
+              <span class="social-value">@sarthak_ranjan_07</span>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sarthak-ranjan-733a08307"
+            target="_blank"
+            rel="noopener"
+            class="contact-social-card bento-card glass linkedin-card"
+          >
+            <div class="social-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="social-info">
+              <span class="social-label">LinkedIn</span>
+              <span class="social-value">sarthak-ranjan</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/sarthak-ranjan"
+            target="_blank"
+            rel="noopener"
+            class="contact-social-card bento-card glass github-card"
+          >
+            <div class="social-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="social-info">
+              <span class="social-label">GitHub</span>
+              <span class="social-value">sarthak-ranjan</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarthak Ranjan. Built with passion & vanilla tech.</p>
+          <p class="easter-egg-hint">Hover the logo for magic.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- PROFILE MODAL -->
+    <div class="profile-modal-overlay" id="profileModal">
+      <div
+        class="profile-modal-content bento-card glass"
+        data-lenis-prevent="true"
+      >
+        <button
+          class="close-modal magnetic-sm"
+          id="closeProfileBtn"
+          aria-label="Close Profile"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="profile-header">
+          <img
+            src="Profile picture.webp"
+            alt="Sarthak Ranjan"
+            class="profile-avatar"
+          />
+          <div class="profile-title">
+            <h3>Sarthak Ranjan</h3>
+            <p class="role">Web Developer</p>
+            <span class="status-badge"
+              ><span class="status-dot-green"></span> Open to
+              Opportunities</span
+            >
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <!-- Info Column -->
+          <div class="profile-section info-list">
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="label">Based In</span>
+                <span class="value">Lucknow, India</span>
+              </div>
+            </div>
+            <div class="info-item" style="align-items: flex-start">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 40px;
+                  height: 40px;
+                  background: rgba(139, 92, 246, 0.1);
+                  border-radius: 10px;
+                  color: var(--accent-primary);
+                  flex-shrink: 0;
+                  margin-top: 5px;
+                "
+              >
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div style="flex: 1">
+                <span class="label" style="margin-bottom: 4px">Education</span>
+                <span
+                  class="value"
+                  style="
+                    font-weight: 700;
+                    font-size: 1.05rem;
+                    color: var(--text-main);
+                  "
+                  >Shri Ramswaroop Memorial University</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.9rem;
+                    color: var(--text-muted);
+                    margin-top: 4px;
+                  "
+                  >B.Tech CSE (Data Science & AI)</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.4);
+                    margin-top: 2px;
+                    margin-bottom: 12px;
+                  "
+                  >Lucknow, UP • 2023 – 2027</span
+                >
+
+                <div
+                  class="cgpa-visual"
+                  style="
+                    margin: 0;
+                    padding: 12px;
+                    background: rgba(255, 255, 255, 0.02);
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    border-radius: 8px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    <span
+                      class="cgpa-label"
+                      style="font-size: 0.8rem; color: var(--text-muted)"
+                      >CGPA</span
+                    >
+                    <span
+                      class="cgpa-score"
+                      style="
+                        font-size: 0.85rem;
+                        font-weight: bold;
+                        color: var(--accent-primary);
+                      "
+                      >7.5/10</span
+                    >
+                  </div>
+                  <span class="cgpa-bar-wrapper">
+                    <span class="cgpa-bar-base"></span>
+                    <span class="cgpa-bar-fill" style="width: 75%;"></span>
+                  </span>
+                </div>
+
+                <div style="margin-top: 12px">
+                  <span
+                    class="status-live"
+                    style="
+                      font-size: 0.75rem;
+                      padding: 4px 8px;
+                      background: rgba(74, 222, 128, 0.1);
+                      color: #4ade80;
+                      border-radius: 12px;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 6px;
+                    "
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 0.4rem"></i>
+                    Currently Pursuing
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Me -->
+          <div class="profile-section">
+            <h4><i class="fa-solid fa-user"></i> About Me</h4>
+            <p>
+              I'm a passionate Web Developer who enjoys transforming ideas into
+              modern, responsive, and interactive web experiences. I focus on
+              writing clean, efficient code and creating user-friendly
+              interfaces that combine functionality with appealing design.
+            </p>
+            <p>
+              Currently pursuing a Bachelor's degree in Computer Science
+              Engineering (AI & Data Science), I'm continuously improving my
+              skills by building real-world projects, learning modern web
+              technologies, and exploring AI-powered development tools.
+            </p>
+          </div>
+
+          <!-- Current Focus -->
+          <div class="profile-section">
+            <h4><i class="fa-solid fa-crosshairs"></i> Current Focus</h4>
+            <ul class="styled-list">
+              <li>Building high-quality frontend projects</li>
+              <li>Learning React & Full Stack Development</li>
+              <li>Improving UI/UX design skills</li>
+              <li>Exploring AI-assisted web development</li>
+            </ul>
+          </div>
+
+          <!-- Interests -->
+          <div class="profile-section">
+            <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+            <div class="tags">
+              <span class="tag"
+                ><i class="fa-solid fa-laptop-code"></i> Web Dev</span
+              >
+              <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tag"
+                ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+              >
+              <span class="tag"
+                ><i class="fa-brands fa-js"></i> JavaScript</span
+              >
+              <span class="tag"><i class="fa-brands fa-react"></i> React</span>
+              <span class="tag"
+                ><i class="fa-solid fa-wind"></i> Tailwind CSS</span
+              >
+              <span class="tag"><i class="fa-solid fa-palette"></i> UI/UX</span>
+              <span class="tag"
+                ><i class="fa-solid fa-database"></i> Data Science</span
+              >
+              <span class="tag"
+                ><i class="fa-solid fa-mobile-screen-button"></i> Responsive
+                Design</span
+              >
+              <span class="tag"><i class="fa-solid fa-robot"></i> AI</span>
+              <span class="tag"
+                ><i class="fa-solid fa-book-open"></i> Learning</span
+              >
+            </div>
+          </div>
+
+          <!-- Connect -->
+          <div class="profile-section full-width">
+            <h4><i class="fa-solid fa-link"></i> Connect</h4>
+            <div class="connect-links">
+              <a
+                href="mailto:sarthakranjan077@gmail.com"
+                class="btn btn-outline magnetic-sm"
+                ><i class="fa-regular fa-envelope"></i> Email</a
+              >
+              <a
+                href="https://github.com/sarthak-ranjan"
+                target="_blank"
+                class="btn btn-outline magnetic-sm"
+                ><i class="fa-brands fa-github"></i> GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/sarthak-ranjan-733a08307"
+                target="_blank"
+                class="btn btn-outline magnetic-sm"
+                ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+              >
+              <a
+                href="https://www.instagram.com/sarthak_ranjan_07?igsh=MW5wOTBmd3h2Y3Jndg=="
+                target="_blank"
+                class="btn btn-outline magnetic-sm"
+                ><i class="fa-brands fa-instagram"></i> Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="profile-modal-overlay" id="projectModal">
+      <div
+        class="profile-modal-content project-modal-custom"
+        data-lenis-prevent="true"
+      >
+        <button class="close-modal magnetic-sm" id="closeProjectModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 id="projectModalTitle">Project Details</h2>
+        <div id="projectModalBody">
+          <!-- Content injected via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Up Button -->
+    <button
+      class="scroll-up-btn magnetic-sm"
+      id="scrollUpBtn"
+      aria-label="Scroll to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Contact form moved to flip card -->
+
+    <!-- More Projects Modal -->
+    <div class="profile-modal-overlay" id="moreProjectsModal">
+      <div
+        class="profile-modal-content project-modal"
+        style="max-width: 800px; width: 90%; text-align: center"
+        data-lenis-prevent="true"
+      >
+        <div class="bento-card glass premium-modal-box">
+          <button
+            class="close-modal magnetic-sm"
+            id="closeMoreProjectsBtn"
+            aria-label="Close"
+            style="position: absolute; top: 1.5rem; right: 1.5rem"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <h3 class="premium-modal-title">Explore More Projects</h3>
+
+          <div class="premium-modal-text">
+            <p>These are a few of my featured projects.</p>
+            <p>
+              I'm continuously building new web applications,<br />
+              improving my frontend development skills, and<br />
+              learning modern technologies through real-world<br />
+              projects.
+            </p>
+            <p>
+              Explore my GitHub to see additional projects,<br />
+              source code, and upcoming work.
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/sarthak-ranjan"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="premium-github-btn"
+          >
+            Explore My GitHub <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Disclaimer -->
+    <div id="mobileDisclaimer" class="mobile-disclaimer">
+      <div class="disclaimer-content">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span
+          >Please review this website or open this Website in Desktop Site</span
+        >
+        <button id="closeDisclaimer" aria-label="Close">&times;</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js?v=217" defer></script>
+  </body>
+</html>
