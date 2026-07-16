@@ -6,9 +6,13 @@ Unlike a static portfolio, this website features a dynamic glassmorphic UI, a cu
 
 ## 🚀 Live Demo
 
-**View the live portfolio here:**
-👉 [https://sarthak-ranjan.github.io/Sarthak-Portfolio/](https://sarthak-ranjan.github.io/Sarthak-Portfolio/)
+## 🚀 Live Demo
 
+Visit the live calculator here: 
+- [GitHub Pages](https://sarthak-ranjan.github.io/Sarthak-Portfolio/)
+- [Netlify](https://sarthak-portfolio4.netlify.app/)
+
+---
 ## ✨ Features
 
 ### Premium UI/UX
@@ -117,7 +121,7 @@ During this project I improved my understanding of:
 ## 👨‍💻 Author
 
 **Sarthak Ranjan**  
-*B.Tech Computer Science (AI & Data Science) | Web Development Intern*
+*B.Tech Computer Science (AI & Data Science) | Web Development*
 
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sarthak-ranjan)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sarthak-ranjan-733a08307/)
