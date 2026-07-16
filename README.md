@@ -6,9 +6,9 @@ Unlike a static portfolio, this website features a dynamic glassmorphic UI, a cu
 
 ## 🚀 Live Demo
 
-Visit the live calculator here: 
-- [GitHub Pages](https://sarthak-ranjan.github.io/Sarthak-Portfolio/)
-- [Netlify](https://sarthak-portfolio4.netlify.app/)
+**View the live portfolio here:**
+- 👉 [Netlify](https://sarthak-portfolio4.netlify.app/)
+- 👉 [GitHub Pages](https://sarthak-ranjan.github.io/Sarthak-Portfolio/)
 
 ---
 ## ✨ Features
