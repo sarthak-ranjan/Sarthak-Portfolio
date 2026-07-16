@@ -627,6 +627,7 @@ img {
   object-fit: cover;
   border: 2px solid var(--border-color);
 }
+
 .theme-toggle {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
@@ -2713,7 +2714,8 @@ img {
 }
 
 .cgpa-bar-base {
-  display: none; /* No longer needed for premium bar */
+  display: none;
+  /* No longer needed for premium bar */
 }
 
 .cgpa-bar-fill {
@@ -5644,6 +5646,7 @@ html.lenis {
    Tech Stack Marquee (Experience -> Education Transition)
    ========================================================================== */
 }
+
 .tech-marquee-container {
   display: flex;
   overflow: hidden;
@@ -6150,9 +6153,11 @@ html.lenis {
     justify-content: center;
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
   }
+
   .mobile-disclaimer.hidden {
     display: none !important;
   }
+
   .disclaimer-content {
     display: flex;
     align-items: center;
@@ -6163,6 +6168,7 @@ html.lenis {
     text-align: center;
     width: 100%;
   }
+
   #closeDisclaimer {
     background: none;
     border: none;
@@ -6171,127 +6177,5 @@ html.lenis {
     cursor: pointer;
     margin-left: auto;
     padding: 0 5px;
-  }
-}
-
-/* ==========================================================================
-   FINAL COMPREHENSIVE MOBILE RESPONSIVENESS OVERRIDES
-   ========================================================================== */
-@media (max-width: 768px) {
-  /* 1. Global Typography & Spacing */
-  h1, .hero-title {
-    font-size: 2.5rem !important;
-    line-height: 1.1 !important;
-  }
-  
-  h2, .section-title {
-    font-size: 2rem !important;
-  }
-  
-  h3, .card-title {
-    font-size: 1.5rem !important;
-  }
-
-  p {
-    font-size: 0.95rem !important;
-  }
-
-  section {
-    padding: 60px 0 !important;
-  }
-
-  /* 2. Global Bento Layouts */
-  .bento-card.span-2,
-  .bento-card.span-3 {
-    grid-column: 1 / -1 !important; /* Force all cards to full width */
-  }
-
-  /* 3. Section Grids -> 1 Column */
-  .hero-content,
-  .about-grid,
-  .skills-grid,
-  .projects-grid,
-  .edu-grid,
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  /* 4. Component Fixes */
-
-  /* Hero adjustments */
-  .hero {
-    padding-top: 100px !important;
-    min-height: auto !important;
-    padding-bottom: 40px !important;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-title-wrapper {
-    justify-content: center;
-  }
-  
-  .hero-actions {
-    justify-content: center;
-    flex-direction: column !important;
-  }
-  
-  .hero-actions .btn {
-    width: 100% !important;
-    justify-content: center;
-  }
-
-  .floating-badge {
-    display: none !important; /* Remove floating clutter on small screens */
-  }
-  
-  .scroll-indicator {
-    display: none !important; /* Hide scroll indicator to save vertical space */
-  }
-
-  .hero-tech-pills {
-    justify-content: center !important;
-  }
-
-  /* Project Overlays */
-  .preview-overlay {
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-
-  .preview-overlay .btn {
-    padding: 10px 15px !important;
-    font-size: 0.85rem !important;
-    width: 80% !important;
-  }
-
-  /* Form & Contact Inputs */
-  .form-row {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
-
-  /* Modals */
-  .profile-modal-content,
-  .project-modal-custom,
-  .project-modal {
-    width: 95% !important;
-    padding: 20px !important;
-    margin: 10px auto !important;
-  }
-
-  /* Timeline */
-  .mini-timeline {
-    padding-left: 10px !important;
-    margin-left: 5px !important;
-  }
-  
-  /* Navigation Fix */
-  .nav-controls {
-    top: 50% !important;
-    transform: translateY(-50%) translateZ(0) !important;
   }
 }

@@ -998,7 +998,7 @@ document.addEventListener("DOMContentLoaded", () => {
           do {
             nextIndex = Math.floor(Math.random() * totalSlides);
           } while (nextIndex === currentIndex && totalSlides > 1);
-          
+
           currentIndex = nextIndex;
           updateSlide();
         }, intervalDuration);
