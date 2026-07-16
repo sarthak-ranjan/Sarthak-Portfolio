@@ -6,10 +6,8 @@ Unlike a static portfolio, this website features a dynamic glassmorphic UI, a cu
 
 ## 🚀 Live Demo
 
-Visit the live portfolio here:
-
-- **[GitHub Pages](#)** _(Replace with actual link)_
-- **[Netlify](#)** _(Replace with actual link)_
+**View the live portfolio here:**
+👉 [https://sarthak-ranjan.github.io/Sarthak-Portfolio/](https://sarthak-ranjan.github.io/Sarthak-Portfolio/)
 
 ## ✨ Features
 
@@ -116,21 +114,10 @@ During this project I improved my understanding of:
 - Creating custom cursors and magnetic buttons
 - UI/UX Best Practices
 
-## 🎯 Future Improvements
-
-- [ ] Add a blog section
-- [ ] Implement multi-language support
-- [ ] Add more interactive WebGL/Three.js backgrounds
-- [ ] Enhance accessibility (a11y) features
-
 ## 👨‍💻 Author
 
-**Sarthak Ranjan**
+**Sarthak Ranjan**  
+*B.Tech Computer Science (AI & Data Science) | Web Development Intern*
 
-B.Tech Computer Science (AI & Data Science)
-
-Web Development Intern
-
-GitHub: https://github.com/sarthak-ranjan
-
-LinkedIn: https://www.linkedin.com/in/sarthak-ranjan-733a08307/
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sarthak-ranjan)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sarthak-ranjan-733a08307/)
