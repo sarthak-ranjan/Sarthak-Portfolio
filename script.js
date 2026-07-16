@@ -29,7 +29,7 @@ if (preloader) {
 
     let i = 0;
     const totalSteps = 20;
-    const intervalTime = 70; // ~1.4 seconds total
+    const intervalTime = 20; // ~0.4 seconds total
 
     const loader = setInterval(() => {
       i++;
@@ -45,10 +45,10 @@ if (preloader) {
           preloader.classList.add("hidden");
           document.body.style.overflow = "";
           setTimeout(() => preloader.remove(), 800);
-        }, 400); // Wait 400ms after hitting 100%
+        }, 150); // Wait 150ms after hitting 100%
       }
     }, intervalTime);
-  }, 300);
+  }, 50);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
