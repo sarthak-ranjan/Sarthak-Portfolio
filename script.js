@@ -167,12 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (docHeight > 0) {
         const progress = (scrollY / docHeight) * 100;
         if (progressBar) progressBar.style.width = `${progress}%`;
-
-        const sideFill = document.getElementById("sideFill");
-        if (sideFill) {
-          sideFill.style.height = `${progress}%`;
-        }
-      }
+    const sideFill = document.getElementById("sideFill");
+    if (sideFill) {
+      sideFill.style.height = `${progress}%`;
+    }      }
 
       // Nav styling
       if (navbar) {

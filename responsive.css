@@ -1280,23 +1280,3 @@
     display: none !important;
   }
 } 
-/* Scroll Progress Styles */
-#scrollProgress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: var(--accent-primary);
-  width: 0%;
-  z-index: 9999;
-}
-#sideFill {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 0%;
-  background: var(--accent-primary);
-  z-index: 9999;
-}
-
