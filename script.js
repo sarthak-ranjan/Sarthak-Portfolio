@@ -1051,6 +1051,18 @@ const initScrollSpy = () => {
 
   if (sections.length === 0 || navLinks.length === 0) return;
 
+  // Intercept clicks to prevent URL hash updates and smoothly scroll
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
   const observerOptions = {
     root: null,
     rootMargin: "-50% 0px -50% 0px",

@@ -795,26 +795,9 @@ img {
   transition: color var(--speed-fast) ease;
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: var(--accent-primary);
-  transition: width var(--speed-normal) var(--easing-standard);
-  border-radius: 2px;
-}
-
 .nav-link:hover,
 .nav-link.active {
   color: var(--text-main);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
 }
 
 .mobile-toggle {
