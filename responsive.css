@@ -1,0 +1,1282 @@
+/* Responsive Styles Extracted from style.css */
+
+@media (max-width: 992px) {
+  #side-progress {
+    display: none;
+  }
+
+  /* Disable custom cursor on touch devices */
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-glow {
+    display: none !important;
+  }
+
+  /* =========================================
+   NAVIGATION
+   ========================================= */
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Put Hamburger on far right */
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    /* Force above the mobile nav-links */
+  }
+
+  .mobile-toggle {
+    display: block;
+    margin: 0;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--speed-normal) ease;
+    z-index: -1;
+    /* Place it BEHIND nav-controls and nav-left */
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-link {
+    font-size: var(--text-xl);
+    font-family: var(--font-heading);
+  }
+
+  .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* =========================================
+   BUTTONS
+   ========================================= */
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-dropdown-container:hover .theme-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Let JS .active class control visibility on all devices */
+}
+
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .connect-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .span-2 {
+    grid-column: span 2;
+  }
+
+  /* Keep full width on tablet */
+}
+
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2,
+  .span-3 {
+    grid-column: span 1;
+  }
+
+  /* Specific Card Styles */
+}
+
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card.span-2 {
+    grid-column: 1 / -1;
+  }
+
+  /* =========================================
+   SKILLS LAYOUT OVERRIDE
+   ========================================= */
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certificate Layout Overrides */
+}
+
+@media (max-width: 600px) {
+  .status-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .status-card .time-display {
+    text-align: left !important;
+  }
+
+  /* Hover States & Branding */
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: var(--space-xl);
+    padding-top: 40px;
+  }
+
+  .hero-right {
+    margin-top: var(--space-lg);
+  }
+
+  .hero-profile-wrapper {
+    width: 280px;
+    height: 380px;
+  }
+
+  .hero-stats {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .floating-badge {
+    display: none;
+    /* Hide floating badges on very small screens to avoid clutter */
+  }
+
+  /* =========================================
+   SCROLL UP BUTTON
+   ========================================= */
+}
+
+@media (max-width: 992px) {
+  .bento-grid.about-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-grid.about-bento .span-2 {
+    grid-column: span 1;
+  }
+
+  /* Card 1: About Me */
+}
+
+@media (min-width: 850px) {
+  .projects-bento-grid {
+    grid-template-columns: 46% 46%;
+    justify-content: space-between;
+    row-gap: 3rem;
+  }
+
+  /* Map projects to exact grid positions (overrides DOM order) */
+  .project-bento:nth-child(1) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* IOCL */
+  .project-bento:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  /* Sarthak Gallery */
+  .project-bento:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  /* Smart Calculator */
+  .project-bento:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  /* Portfolio */
+}
+
+@media (max-width: 849px) {
+  /* Ensure Portfolio stays at the bottom on mobile */
+  .project-bento:nth-child(3) {
+    order: 4;
+  }
+
+  .project-bento:nth-child(4) {
+    order: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-bento.span-full {
+    flex-direction: column;
+  }
+
+  /* ==========================================================================
+   Project Preview & Hover Effects
+   ========================================================================== */
+}
+
+@media (max-width: 900px) {
+  .project-bento.span-full .project-preview {
+    width: 100%;
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+}
+
+@media (max-width: 850px) {
+  .project-bento {
+    border-color: rgba(139, 92, 246, 0.3) !important;
+  }
+
+  .project-bento .tech-chip {
+    border-color: color-mix(
+      in srgb,
+      var(--accent-primary) 30%,
+      transparent
+    ) !important;
+    background: rgba(139, 92, 246, 0.05) !important;
+  }
+
+  .project-bento .project-number {
+    color: var(--accent-primary) !important;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3) !important;
+  }
+
+  /* ==========================================================================
+   Impact Stats Bento
+   ========================================================================== */
+}
+
+@media (max-width: 600px) {
+  .contact-form .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 12px !important;
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    position: relative !important;
+  }
+
+  .theme-dropdown-container {
+    margin: 0 !important;
+    position: relative !important;
+  }
+
+  /* ABSOLUTE POSITION OVERRIDE FOR NAV CONTROLS */
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 99999 !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  .mobile-toggle,
+  .theme-dropdown-container {
+    display: flex !important;
+    margin: 0 !important;
+  }
+
+  /* FIX WEBKIT RENDER TREE BUG */
+}
+
+@media (max-width: 768px) {
+  .glass-nav {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .nav-controls {
+    transform: translateY(-50%) translateZ(0) !important;
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* STRIP NAVBAR ANIMATIONS ON MOBILE */
+}
+
+@media (max-width: 768px) {
+  .glass-nav {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .nav-controls {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .mobile-toggle,
+  .theme-dropdown-container,
+  .theme-toggle {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-disclaimer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(139, 92, 246, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 12px 20px;
+    z-index: 9999999;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-disclaimer.hidden {
+    display: none !important;
+  }
+
+  .disclaimer-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+    text-align: center;
+    width: 100%;
+  }
+
+  #closeDisclaimer {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 5px;
+  }
+}
+
+/* ==========================================================================
+   FINAL MOBILE RESET BLOCK (OVERFLOW & SIZING FIXES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. HORIZONTAL SCROLL KILL SWITCH */
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  /* 2. PURGE HARDCODED SIZES & 3. 100DVH FIX */
+  .hero {
+    min-height: 100dvh !important;
+    height: auto !important;
+  }
+
+  .bento-card {
+    padding: 1.5rem !important; /* Slightly reduce padding on tiny screens */
+  }
+
+  /* Modals */
+  .profile-modal-content,
+  .project-modal-custom,
+  .project-modal {
+    width: 95% !important;
+    max-width: 100% !important;
+    padding: 1.5rem !important;
+    margin: 10px auto !important;
+  }
+
+  /* Ensure Images don't overflow */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 4. COMPONENT ISOLATION REINFORCEMENT */
+  .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* Force all bento grids to 1 column regardless of specificity */
+  .about-grid,
+  .skills-grid,
+  .projects-grid,
+  .edu-grid,
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+}
+
+/* ==========================================================================
+   ADVANCED MOBILE UX UPGRADES (Typography, Touch, Smart Header)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Fluid Typography (Clamp) */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem) !important;
+  }
+  h2 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem) !important;
+  }
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+  }
+
+  /* 2. Fat Finger Rule (Touch Targets) */
+  .mobile-toggle,
+  .theme-toggle,
+  .social-link {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3. Content Reordering (Image above text) */
+  .hero-right {
+    order: -1 !important; /* Forces the image to the top of the flex container */
+    margin-bottom: 2rem !important;
+  }
+
+  /* 4. Smart Header (Auto-Hiding) */
+  .glass-nav {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .glass-nav.header-hidden {
+    transform: translateY(-100%) !important;
+  }
+
+  /* 5. Replacing Hover States with :active for Mobile Feedback */
+  .btn:active,
+  .project-bento:active,
+  .social-link:active,
+  .theme-dropdown-menu .theme-option:active {
+    transform: scale(0.95) !important;
+    opacity: 0.8 !important;
+    transition: all 0.1s ease !important;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE SCALE DOWN (Shrink Fonts, Buttons, and Cards)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Global Proportion Scaling */
+  html {
+    font-size: 14px !important; /* Shrinks all 'rem' based sizes globally by ~12.5% */
+  }
+
+  /* 2. Shrink Buttons */
+  .btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .nav-controls .btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* 3. Shrink Cards and Modals */
+  .bento-card {
+    padding: 1rem !important; /* Extremely tight padding for phones */
+    border-radius: 16px !important; /* Slightly tighter corners */
+  }
+
+  /* Shrink text that might not be using rem */
+  p,
+  .text-sm,
+  .text-md {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Shrink Project Tech Chips */
+  .tech-chip {
+    padding: 3px 8px !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* ==========================================================================
+   HERO 2-COLUMN MOBILE RESTRUCTURE (Aggressive Shrink)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Force Side-by-Side Layout */
+  .hero-content {
+    display: flex !important;
+    flex-direction: row !important;
+    text-align: left !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+  }
+
+  /* 2. Revert the Profile Image Order (Put it back on the right) */
+  .hero-right {
+    order: 0 !important;
+    margin-bottom: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  .hero-left {
+    flex: 1 1 auto !important;
+  }
+
+  /* 3. Aggressively Shrink the Text (Left Column) */
+  .hero-badge {
+    font-size: 9px !important; /* Extremely small text for the location */
+    padding: 3px 6px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-badge i {
+    font-size: 9px !important;
+  }
+
+  .hero-badge span {
+    font-size: 9px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-desc {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    max-width: 140px !important; /* Forces the text to break into ~4 short lines */
+    margin-left: 0 !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+    flex-direction: row !important; /* Put buttons in one line */
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    width: 100% !important;
+  }
+
+  .hero-actions .btn {
+    width: auto !important; /* Allow them to sit side-by-side */
+    font-size: 8px !important; /* Extremely small text */
+    padding: 3px 6px !important; /* Very tiny padding */
+    justify-content: center !important;
+  }
+
+  .hero-tech-pills {
+    margin-top: 10px !important;
+    gap: 2px !important; /* Tighter gap */
+    flex-wrap: wrap !important;
+  }
+
+  .hero-tech-pills .pill {
+    font-size: 8px !important; /* Ultra small text */
+    padding: 2px 4px !important;
+  }
+
+  .hero-tech-pills .pill i {
+    font-size: 8px !important; /* Ultra small icon */
+    margin-right: 2px !important;
+  }
+
+  /* 4. Aggressively Shrink the Profile Picture (Right Column) */
+  .hero-profile-wrapper {
+    width: 130px !important;
+    height: 170px !important;
+  }
+}
+
+/* ==========================================================================
+   HERO 2-COLUMN BUG FIXES (Vanishing Image & Empty Space)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Fix the empty space: Because the row is so short, 100vh centered it with huge gaps. 
+     We remove 100vh and use natural padding. */
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 30px !important;
+    padding-bottom: 50px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Fix the vanishing image: The global img rule broke absolute positioned images. */
+  .hero-right {
+    width: 140px !important;
+    display: block !important;
+  }
+
+  .hero-profile-img {
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+/* ==========================================================================
+   ULTIMATE HERO IMAGE FIX
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Force the container to be visible and take up exactly its space */
+  .hero-right {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 140px !important; /* Decreased size */
+    height: auto !important; /* Shrink-wrap to the image height exactly */
+    margin-top: -60px !important; /* Adjusted pull-up for the smaller size */
+    position: relative !important;
+    flex-shrink: 0 !important; /* Prevents flexbox from crushing it to 0 width */
+  }
+
+  /* Force the wrapper to respect the boundaries */
+  .hero-profile-wrapper {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important; /* Allow natural image height */
+  }
+
+  /* Force the card to fit inside the wrapper */
+  .hero-profile-card {
+    position: relative !important; /* Remove absolute positioning */
+    width: 100% !important;
+    height: auto !important; /* Allow natural image height */
+    display: block !important;
+  }
+
+  /* Force the image to fill the card */
+  .hero-profile-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important; /* Allow natural image height */
+    object-fit: cover !important; /* Since height is auto, it naturally matches aspect ratio without letterboxing */
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   FLEXBOX OFF-SCREEN FIX
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-left {
+    max-width: calc(100% - 150px) !important;
+    min-width: 0 !important; /* CRITICAL: allows flex item to shrink below content size */
+    word-break: break-word !important; /* Ensures long titles wrap instead of pushing layout */
+    overflow: hidden !important; /* Keep long text contained */
+  }
+
+  .hero-content {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important; /* Put them right next to each other */
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-right {
+    transform: none !important; /* Disable any JS reveal translations */
+  }
+}
+
+/* ==========================================================================
+   FURTHER SHRINKING (Arrow & Badge)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Make the location badge even smaller */
+  .hero-badge {
+    font-size: 6px !important;
+    padding: 2px 4px !important;
+    white-space: nowrap !important;
+    gap: 3px !important; /* Reduce the gap between icon and text */
+  }
+
+  .hero-badge span {
+    font-size: 6px !important;
+    padding: 0 !important; /* Remove accidental extra padding */
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-badge i {
+    font-size: 6px !important;
+    padding: 0 !important; /* Remove accidental extra padding */
+    margin-right: 0 !important; /* Remove any default margin */
+  }
+
+  /* Make the arrow button beside the name smaller */
+  .profile-arrow {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    margin-left: 5px !important;
+  }
+
+  .profile-arrow i {
+    font-size: 10px !important;
+  }
+}
+
+/* ==========================================================================
+   REMOVE HERO CARD STYLING (Just show the image)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Remove all background, borders, and shadows from the card */
+  .hero-profile-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 12px !important; /* Just a slight rounding on the image itself */
+  }
+
+  /* Remove the glowing effect behind the card */
+  .hero-profile-wrapper .card-glow {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   SCROLL INDICATOR FIX
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Push the scroll indicator down so it doesn't overlap the tech stacks */
+  .scroll-indicator {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    bottom: 20px !important; /* Safely inside the hero container so it doesn't get clipped */
+    transform: translateX(-50%) scale(0.8) !important;
+    z-index: 50 !important; /* Ensure it stays above other elements */
+  }
+}
+
+/* ==========================================================================
+   MISSION STATEMENT MOBILE ADJUSTMENT
+   ========================================================================== */
+@media (max-width: 768px) {
+  .mission-text {
+    font-size: 1.25rem !important; /* Decreased size for mobile */
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   ABOUT SECTION MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Make the section title the same size as the hero title */
+  .section-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
+  }
+
+  /* Make the subtitle small */
+  .section-desc {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Shrink the size of all bento cards */
+  .bento-card {
+    padding: 1.25rem !important; /* Reduce huge desktop padding */
+  }
+
+  /* Shrink text inside the about cards */
+  .bio-text {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .quick-profile p {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ==========================================================================
+   SKILLS & MARQUEE MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Decrease size of marquee text */
+  .marquee-content span,
+  .tech-marquee-content span,
+  .tech-marquee-track span {
+    font-size: 1rem !important;
+  }
+
+  /* Shrink the size of skills bento cards (overriding specific grid padding) */
+  .skills-grid .bento-card {
+    padding: 1.25rem !important;
+  }
+
+  /* Shrink card titles and descriptions in skills section */
+  .skills-grid .card-title {
+    font-size: 0.85rem !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .skills-grid .card-desc {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   STATS & PROJECTS MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Shrink Stats Section */
+  .stats-grid {
+    gap: 1.5rem !important; /* Reduce large gap between stats */
+  }
+
+  .stat-number {
+    font-size: 2rem !important; /* Smaller numbers */
+  }
+
+  .stat-plus {
+    font-size: 1.5rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.7rem !important; /* Smaller label text */
+  }
+
+  /* Shrink Projects Section */
+  .project-content {
+    padding: 1.25rem !important; /* Reduce padding inside project cards */
+  }
+
+  .project-bento .card-title {
+    font-size: 1rem !important; /* Smaller project title */
+  }
+
+  .project-bento .card-desc {
+    font-size: 0.8rem !important; /* Smaller project description */
+    line-height: 1.4 !important;
+  }
+
+  .project-highlights li {
+    font-size: 0.75rem !important; /* Smaller bullet points */
+  }
+
+  .tech-chip {
+    font-size: 0.65rem !important; /* Smaller technology tags */
+    padding: 3px 8px !important;
+  }
+}
+
+/* ==========================================================================
+   IMPACT STATS & EXPERIENCE MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Shrink Impact Stats */
+  .stat-bento h2 {
+    font-size: 2.2rem !important; /* Override inline 3.5rem */
+  }
+
+  .stat-bento p {
+    font-size: 0.8rem !important; /* Override inline 1.1rem */
+  }
+
+  .stat-bento {
+    padding: 1.5rem 1rem !important; /* Override inline 3rem 1.5rem */
+  }
+
+  /* Shrink Experience Cards */
+  .timeline-content {
+    padding: 1.25rem !important; /* Reduce padding inside experience cards */
+  }
+
+  .timeline-meta {
+    font-size: 0.7rem !important; /* Smaller dates and company names */
+  }
+
+  .timeline-content .role {
+    font-size: 1rem !important; /* Smaller role titles */
+    margin-bottom: 0.5rem !important;
+  }
+
+  .duties li {
+    font-size: 0.8rem !important; /* Smaller bullet points */
+  }
+}
+
+/* ==========================================================================
+   TECH MARQUEE & EDUCATION MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Shrink Tech Stack Marquee */
+  .tech-icon {
+    font-size: 2.2rem !important; /* Smaller icons so they don't take up the whole screen */
+  }
+
+  .tech-marquee-section {
+    padding: 1rem 0 !important; /* Tighter padding around the marquee */
+  }
+
+  /* Shrink Education Section Cards */
+  .featured-edu-card {
+    padding: 1.25rem !important;
+  }
+
+  .featured-title h4 {
+    font-size: 1rem !important; /* Smaller degree title */
+  }
+
+  .featured-title p {
+    font-size: 0.8rem !important; /* Smaller university name */
+  }
+
+  .edu-details-list li {
+    font-size: 0.8rem !important; /* Smaller list items */
+  }
+
+  .cgpa-score {
+    font-size: 1rem !important; /* Smaller CGPA number */
+  }
+
+  /* History Cards (Class XII, X, Certifications) */
+  .history-card {
+    padding: 1rem !important; /* Tighter padding for smaller cards */
+  }
+
+  .history-card h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .history-card .course {
+    font-size: 0.75rem !important;
+  }
+
+  .history-meta .score,
+  .history-meta .year {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* ==========================================================================
+   PHILOSOPHY QUOTE & CONTACT CARDS MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Shrink Philosophy Quote */
+  .quote-wrapper {
+    padding: 1.5rem 1rem !important; /* Reduce large padding around quote */
+  }
+
+  .quote-text {
+    font-size: 1.25rem !important; /* Smaller quote text */
+    line-height: 1.4 !important;
+  }
+
+  .quote-author {
+    font-size: 0.85rem !important; /* Smaller author name */
+  }
+
+  /* Shrink Contact Social Cards */
+  .contact-social-card {
+    padding: 1rem !important; /* Tighter padding for contact cards */
+    gap: 0.25rem !important;
+  }
+
+  .contact-social-card .social-icon {
+    font-size: 1.25rem !important; /* Smaller icon */
+  }
+
+  .contact-social-card .social-label {
+    font-size: 0.8rem !important; /* Smaller label */
+  }
+
+  .contact-social-card .social-value {
+    font-size: 0.7rem !important; /* Smaller value text */
+  }
+}
+
+/* ==========================================================================
+   PROFILE MODAL MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Profile Modal Container */
+  .profile-modal-content {
+    padding: 1.25rem !important; /* Tighter padding for modal */
+  }
+
+  /* Guarantee the avatar is a perfect circle */
+  .profile-avatar {
+    width: 90px !important; /* Smaller size on mobile */
+    height: 90px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+  }
+
+  .profile-title h3 {
+    font-size: 1.5rem !important; /* Shrink name */
+  }
+
+  .profile-title .role {
+    font-size: 0.9rem !important; /* Shrink role */
+  }
+
+  /* Decrease size of cards/info items inside the modal */
+  .info-item {
+    gap: 10px !important;
+  }
+
+  .info-item i {
+    font-size: 1.2rem !important; /* Smaller icons */
+    width: 20px !important;
+  }
+
+  .info-item .label {
+    font-size: 0.75rem !important; /* Smaller labels */
+  }
+
+  .info-item .value {
+    font-size: 0.85rem !important; /* Smaller values */
+  }
+}
+
+/* ==========================================================================
+   PROFILE MODAL ULTRA-SHRINK MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Force all info item text to be incredibly compact */
+  .profile-modal-content .info-item .label {
+    font-size: 0.7rem !important;
+  }
+
+  .profile-modal-content .info-item .value {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+  }
+
+  /* Target specific inline span elements inside the modal */
+  .profile-modal-content .info-item span[style*="font-size: 1.05rem"] {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .profile-modal-content .info-item span[style*="font-size: 0.9rem"] {
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .profile-modal-content .info-item span[style*="font-size: 0.8rem"] {
+    font-size: 0.65rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Shrink skill tags in the modal */
+  .profile-modal-content .skill-tags span {
+    font-size: 0.65rem !important;
+    padding: 3px 6px !important;
+  }
+
+  /* Tighter flex gap */
+  .profile-modal-content .info-item {
+    gap: 8px !important;
+  }
+}
+
+/* ==========================================================================
+   PROFILE MODAL SECTIONS SHRINK
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Shrink section headers inside modal */
+  .profile-section h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Shrink About Me and Current Focus text */
+  .profile-section p,
+  .styled-list li {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Shrink Interests tags */
+  .profile-section .tags .tag {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Shrink Connect buttons */
+  .connect-links {
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .connect-links .btn {
+    font-size: 0.7rem !important;
+    padding: 6px 12px !important;
+  }
+}
+
+/* ==========================================================================
+   TOUCH DEVICE OPTIMIZATION (Disable Sticky Hovers)
+   ========================================================================== */
+@media (hover: none) {
+  /* Cards */
+  .bento-card:hover,
+  .project-bento:hover,
+  .stat-bento:hover,
+  .history-card:hover,
+  .featured-edu-card:hover,
+  .contact-social-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* Tech Icons */
+  .tech-icon:hover {
+    transform: none !important;
+    filter: none !important;
+    color: rgba(255, 255, 255, 0.25) !important;
+  }
+
+  /* Buttons */
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .more-projects-text-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Navigation */
+  .nav-link:hover::after {
+    width: 0 !important;
+  }
+
+  /* Disable mouse-follow glow on touch devices to save battery */
+  .card-glow {
+    display: none !important;
+  }
+}

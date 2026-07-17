@@ -1352,3 +1352,36 @@ const initParticles = () => {
   }
 };
 initParticles();
+
+/* ==========================================================================
+   SMART HEADER (AUTO-HIDING ON MOBILE SCROLL)
+   ========================================================================== */
+let lastScrollTop = 0;
+const glassNav = document.querySelector(".glass-nav");
+
+window.addEventListener(
+  "scroll",
+  () => {
+    // Only apply on mobile devices
+    if (window.innerWidth > 768) {
+      if (glassNav.classList.contains("header-hidden")) {
+        glassNav.classList.remove("header-hidden");
+      }
+      return;
+    }
+
+    let currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    // Downscroll (hide header) after scrolling past the header height (80px)
+    if (currentScroll > lastScrollTop && currentScroll > 80) {
+      glassNav.classList.add("header-hidden");
+    } else {
+      // Upscroll (show header)
+      glassNav.classList.remove("header-hidden");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  },
+  { passive: true },
+);
