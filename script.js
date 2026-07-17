@@ -1353,6 +1353,53 @@ const initParticles = () => {
 };
 initParticles();
 
+/* Experience Carousel */
+function initExperienceCarousel() {
+  const galleries = document.querySelectorAll('.exp-media-gallery');
+  galleries.forEach(expGallery => {
+    const track = expGallery.querySelector('.carousel-track');
+    const dotsBox = expGallery.querySelector('.carousel-dots');
+    const slides = Array.from(track.children);
+    if (slides.length === 0) return;
+    const slideW = slides[0].getBoundingClientRect().width;
+
+    // create navigation dots only if they don't already exist
+    if (dotsBox.children.length === 0) {
+      slides.forEach((_s, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        dot.dataset.idx = i;
+        dot.addEventListener('click', () => moveTo(i));
+        dotsBox.appendChild(dot);
+      });
+    }
+    const dots = Array.from(dotsBox.children);
+
+    const setActive = (i) => {
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    };
+
+    let cur = 0;
+    const moveTo = (i) => {
+      cur = i;
+      track.style.transform = `translateX(${-slideW * cur}px)`;
+      setActive(cur);
+    };
+
+    let timer = setInterval(() => moveTo((cur + 1) % slides.length), 3000);
+
+    expGallery.addEventListener('mouseenter', () => clearInterval(timer));
+    expGallery.addEventListener('mouseleave', () => {
+      timer = setInterval(() => moveTo((cur + 1) % slides.length), 3000);
+    });
+
+    moveTo(0);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initExperienceCarousel);
+
 /* ==========================================================================
    SMART HEADER (AUTO-HIDING ON MOBILE SCROLL)
    ========================================================================== */
